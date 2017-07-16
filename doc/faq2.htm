@@ -1,0 +1,77 @@
+<h3>PR 0.9-R2 Usage Frequent Asked Questions</h3>
+
+<p><dd><b><font color=red>Q:</font> What features has PR got?</b>
+
+<p><dd><b><font color=red>A:</font></b> PR was designed for three basic functions:
+<ul>
+ <li>Extracting DAT files into directories
+ <li>Importing directories into DAT files
+ <li>Getting information on DAT files
+</ul>
+<p><dd><b><font color=red>Q:</font> What exactly is extracting a DAT file?</b>
+
+<p><dd><b><font color=red>A:</font></b> When you have a file (e.g. vdungeon.dat) and you want the resources that are saved inside to be saved in directories in known formats (e.g. bmp)
+
+<p><dd><b><font color=red>Q:</font> What is resources.xml?</b>
+
+<p><dd><b><font color=red>A:</font></b> Is a file that saves easy names and descriptions for the content of the DAT files. When the extracted resources are re-imported the filenames are read from here.
+
+<p><dd><b><font color=red>Q:</font> What is to import a directory?</b>
+
+<p><dd><b><font color=red>A:</font></b> When you are reading a resource directory (e.g. a directory with the bmp or wav you need to make the DAT file) to make a DAT file, you are importing this directory. You need to have all resources there, in any other case the DAT file won't work fine in the game.
+
+<p><dd><b><font color=red>Q:</font> When you said the third basic function you said "Getting information on DAT files", what does exactly that mean?</b>
+
+<p><dd><b><font color=red>A:</font></b> Getting the DAT file type. e.g. vdungeon is image, digisnd is wave.
+
+<p><dd><b><font color=red>Q:</font> I want the program to make backups of the edited files. Is it possible?</b>
+
+<p><dd><b><font color=red>A:</font></b> Yes, run PR with the -b or --backup option and specify an extension (e.g. bak) and all files will be backuped in files with this name. (e.g. compiling a new vdungeon.dat will save the old file as vdungeon.dat.bak)
+
+<p><dd><b><font color=red>Q:</font> I don't want the program to ask if I want to replace a file, what can I do?</b>
+
+<p><dd><b><font color=red>A:</font></b> Use the -f or --force option.
+
+<p><dd><b><font color=red>Q:</font> I'm a web coder and I want to classify a file that is in the server</b>
+
+<p><dd><b><font color=red>A:</font></b> Run the program in the --cgi mode and capture the output in order to parse it. Take a look at the Princed Uploading System (that is under the GPL) at the Princed home page; this system uses PR to classify uploaded DAT files.
+
+<p><dd><b><font color=red>Q:</font> I'm extracting a level set (levels.dat) and I want to set the author of the extracted PLV levels to me</b>
+
+<p><dd><b><font color=red>A:</font></b> Use PR with the -a or --setauthor option and add a name to save in the author field of the PLV information. If you don't do that, the default author name "PR user" will be saved instead.
+
+<p><dd><b><font color=red>Q:</font> Can I use another resources.xml file?</b>
+
+<p><dd><b><font color=red>A:</font></b> If there is another newer version of the resources xml file, it is recommended to upgrade PR. But if you want to, you can rename your file to resources.xml or use the -m or --resource directive.
+
+<p><dd><b><font color=red>Q:</font> What is the raw option?</b>
+
+<p><dd><b><font color=red>A:</font></b> This is for format developers. But if you are interested, DAT files are archives, like tar and zip files. The files are stored indexed and compressed. The raw option exports or imports the files from the archive without performing any type of conversion or compression/decompression, so the extracted file is in the format the game uses (not compatible in most cases).
+
+<p><dd><b><font color=red>Q:</font> The program seems to work, but the result is an 8 bytes-length file.</b>
+
+<p><dd><b><font color=red>A:</font></b> Upgrade PR
+
+<p><dd><b><font color=red>Q:</font> The program seems to work, but the result is a file that doesn't work.</b>
+
+<p><dd><b><font color=red>A:</font></b> Try the -v or --verbose option, and check if all files are Ok. The verbose option has lots of extra information.
+
+<p><dd><b><font color=red>Q:</font> Is it possible to extract all dat files that are in all subdirectories of the specified directory?</b>
+
+<p><dd><b><font color=red>A:</font></b> Use PR -R or --recursive (take care with the upper case). This will recourse into directories and check out all dat files located in this directory and subdirectories.
+
+<p><dd><b><font color=red>Q:</font> What is the --unknown option for?</b>
+
+<p><dd><b><font color=red>A:</font></b> Hey, if you want to be a resources.xml writer, just contact us!
+
+<p><dd><b><font color=red>Q:</font> I'm working on a file called dungeonbyjohn.dat, and I don't want to rename it to vdungeon.dat each time I do an extraction. How can I do?</b>
+
+<p><dd><b><font color=red>A:</font></b> Use the -t or --datfile option. That is what it was made for. For example, if you want dungeonbyjohn.dat to be treated like vdungeon.dat, the valid syntax should be:
+<dd><code>pr -tvdungeon.dat -xdirectory dungeonbyjohn.dat</code>
+
+<pre>
+
+(c) 2003 - Copyleft Princed Development Team
+           http://www.princed.org
+
+Last update: 2004-02-12 01:06 UTC-3</pre>

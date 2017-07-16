@@ -1,0 +1,16 @@
+EXPORTS
+freeParsedStructure
+freeParsingCache
+freeTagStructure
+parseStructure
+parseXmlFile
+prClassifyDat
+prExportDat
+prExportDatOpt
+prImportDat
+prImportDatOpt
+prSetOutput
+resourceTreeGetChild
+resourceTreeGetInfo
+resourceTreeGetNext
+setCompressionLevel

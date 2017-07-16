@@ -1,0 +1,82 @@
+<h3>PR 0.9-R2 Resource edition Frequent Asked Questions</h3><div align=justify>
+
+<p><dd><b><font color=red>Q:</font> What extraction formats are supported?</b>
+
+<p><dd><b><font color=red>A:</font></b> Take a look at the current version readme.txt file for explained specifications. Anyway, BMP, WAV, MID, PAL (jasc format) and PLV are supported.
+
+<p><dd><b><font color=red>Q:</font> I'm importing an image but it gots corrupted in the game, why?</b>
+
+<p><dd><b><font color=red>A:</font></b> Perhaps this is a bug, we aren't perfect. Anyway, be careful to keep the format options in the extracted file (don't change the number of colour sets, format compression, etc). We invite you to contribute and report the bug, in that case please check that you are having the latest version and fill in the bug report form from <a href=http://project.princed.org>http://project.princed.org</a>.
+
+<p><dd><b><font color=red>Q:</font> I'm importing an image but PR doesn't want to import it?</b>
+
+<p><dd><b><font color=red>A:</font></b> First use the -v or --verbose option to see what image is that. Then check if the image exists and, if you are in unix-like systems, check case of the file, remember some operating systems are case sensitive. If the image exists, check that this image has a palette of 16 colours and the format is correct. Some images are in a two-color format, make sure that images aren't one of them (check them in resources.xml if palette is set to monochrome).
+
+<p><dd><b><font color=red>Q:</font> I don't understand the palettes!</b>
+
+<p><dd><b><font color=red>A:</font></b> First of all, remember we made the editor, not the dat format, so there are some things we would change if we where the game coders, for example this one. The DAT format supports only one palette for a group of images. This means that if you want to change the palette for one image you have to change all other images' palettes. Read the questions below to understand it.
+
+<p><dd><b><font color=red>Q:</font> So, how can I edit a palette of a group of images?</b>
+
+<p><dd><b><font color=red>A:</font></b> You have to edit the palette of one image and export it to the PAL file that represent this group. For example for all images in vdungeon.dat the palette is called dungeon.pal. If you want to know what palette belongs to what image, just take a look at resources.xml. Note that the palettes in each BMP files are just for viewing purposes, changing them won't change the original palette; the only way to change the original palette is changing the PAL file. The import tool will always ignore the palettes for all BMPs files, and use the PAL file. Make sure to use the JASC PAL format (supported by Paint Shot Pro) because other formats like MS PAL aren't supported.
+
+<p><dd><b><font color=red>Q:</font> Ok, I changed the palette file, now what?</b>
+
+<p><dd><b><font color=red>A:</font></b> If you want all the BMP files you are editing to be updated with the new palette, just import the file and re export it again. The new palette will be propagated to all the files. Now you can edit the files using the palette that will be displayed in the game.
+
+<p><dd><b><font color=red>Q:</font> I replaced the PAL file and now all the images have the colours swapped. Any suggestions?</b>
+
+<p><dd><b><font color=red>A:</font></b> Remember that the palette has an index order, you must keep this order if you want the images to be displayed correctly in the game. To prevent/solve this problem you have to fix the palette order, the easy way is applying the new palette using the nearest colour method to the affected images before the palette changing. A palette will be exported rightfully only if the colour indexes are in the same order as the PAL file, to check this you can apply the palette using the palette index number method.
+
+<p><dd><b><font color=red>Q:</font> Is there any definition loss?</b>
+
+<p><dd><b><font color=red>A:</font></b> Yes JASC palettes has 24 bit RGB values (16,7 millions of colours), DAT palettes has 18 bit RGB values (262144 colours). Colours are approached to the nearest 18-bit colour  equivalence. For example the RGB colour (123,122,121) will became (124,124,120) using multiples of 4. This is the only definition loss. After this approaching is done the first time, you can export and import a DAT file all the times you want and the definition will be the same.
+
+<p><dd><b><font color=red>Q:</font> I'm not sure where to find the correct PAL file for an image</b>
+
+<p><dd><b><font color=red>A:</font></b> This is the hardest way, but if you insist... Open resources.xml with a simple text editor (vim, notepad, TextPad, etc). Look for the file name of the BMP image. This will appear in an item tag like this <code>&lt;item value="478" path="chopped.bmp"&gt;Prince Chopped&lt;/item&gt;</code>. this item belongs to a bigger item,in that case <code>&lt;folder path="deaths"&gt;</code>. This means that the file is in the deaths folder. This item is in a bigger item section like this: <code>&lt;folder name="Our prince and mouse images" file="kid.dat" path="kid" palette="400" itemtype="image"&gt;</code>. Now we know that the folder that contained the image is in directory "kid" and its palette value is 400. Then just look at a resource where value="400" inside the folder of the same file, in this case file="kid.dat", so we'll find <code>&lt;item value="400" path="kid.pal" itemtype="palette"&gt;Resource number 400&lt;/item&gt;</code>. This means that a palette value 400 is correctly a palette and the path name is kid.pal.
+
+<p><dd><b><font color=red>Q:</font> How can I edit resources.xml?</b>
+
+<p><dd><b><font color=red>A:</font></b> Open it, read instructions and comments written there and happy editing.
+
+<p><dd><b><font color=red>Q:</font> How can I edit PCS files?</b>
+
+<p><dd><b><font color=red>A:</font></b> We will release our little piano program some day! Anyway, readme.txt explains the format.
+
+<p><dd><b><font color=red>Q:</font> How can I edit the other guards?</b>
+
+<p><dd><b><font color=red>A:</font></b> All guards are sharing the BMP files, and have different palettes, so you can only edit the palettes. If you really want to edit them, there is a file in prince.dat called guard palettes.ext. Using an <a href="http://www.chmaas.handshake.de/delphi/freeware/xvi32/xvi32.htm">hex editor</a> you may edit it this way: There are 16 colours per guard, each colour has 3 bytes. So a guard has 48 bytes (the file has 7 guards and 336 bytes). The colour index numbers are in order. So if you want to locate the colour 4 of the guard type 3 it is:
+<br><dd><dd><code>3*colourNumber+48*guardNumber = 3*4+48*3 = 156</code>
+<br><dd>Remember the enumeration starts from 0. A colour field of 3 bytes has this format: one byte for the Red saturation value, one for the green and one for the blue following that order. The values are unsigned and from 0 to 64. So you have to multiply this values by 4 to get the palette saturation value. For example the 3 bytes that starts in 156 are 1E 17 0E in hex and 30, 23, 14 in decimal. 30*4=120; 23*4=92; 14*4=56; so the RGB value of the fifth colour (indexed 4) of the palette of the fourth guard (3 if we count the first guard as 0) is (120,92,56). Note they are all multiples of 4. Maybe some day we will include a support of this file in PR.
+
+<p><dd><b><font color=red>Q:</font> I improved a bit resources.xml in order to make easier my editing</b>
+
+<p><dd><b><font color=red>A:</font></b> What are you waiting? Send it! We may include it in the next release!
+
+<p><dd><b><font color=red>Q:</font> I edited resources.xml but now my compiled files are broken</b>
+
+<p><dd><b><font color=red>A:</font></b> Use the provided resources.xml's, we have tested them a lot. In case you invested too much time in that and you don't want it to be wasted, send it, we have developed some tools to check, detect errors and fix broken resources.xml. Remember: <b>don't delete items</b> you don't know what are them for, if one item is missing or has another identification value, all imported DAT files using this item may be broken. Even ext files are needed.
+
+<p><dd><b><font color=red>Q:</font> PR doesn't work in my game set?</b>
+
+<p><dd><b><font color=red>A:</font></b> Current resources.xml file only supports POP 1.4. You may want to make your own resources.xml for your version, in that case, empty the current resources.xml you have, only leave the resources and ?xml version tags and export the dat files. Exported files will be autodetected and saved in the unknown folder with the unknown.xml file. There it is the information of your dat file, you can add it to the resources.xml you made and edit the descriptions, etc.</a>.
+
+<p><dd><b><font color=red>Q:</font> Ok, I've finished a graphic or level set, can I publish it?</b>
+
+<p><dd><b><font color=red>A:</font></b> Yes, of course, it's your work and you can publish. We ask you to publish it under the GPL or any compatible license. We have a site where we centralized all the level, graphic ans sound sets made for Prince of Persia, we recomend you to publish it there because it is there where the people will look first. The site is <a href="http://www.princed.org/artworks/">http://www.princed.org/artworks</a>.
+
+<p><dd><b><font color=red>Q:</font> I Hex-edited a DAT file and now prince of persia asks me for the disks. How did you do to avoid this problem?</b>
+
+<p><dd><b><font color=red>A:</font></b> Work, work and more work. Each resource has a checksum, there is an index for each dat file, the format is very complicated. If something is wrong the game will ask for the instalation disks. Hex-editing a dat file without any expirience or reading any documentation could become a bit frustrating and damage your dat files. We spent a lot of time getting this error until we discovered how to calculate the checksums, how the index works, how to locate it, etc. We are working in a DAT file format specification for those people who wanna know how he format is. Anyways we highly recommend coders to use our libraries. We don't want to make people work in something that was already done, so we opened the source and you are able to look into and edit it under the terms of the GPL.
+
+<p><dd><b><font color=red>Q:</font> How to contact you?</b>
+
+<p><dd><b><font color=red>A:</font></b> <a href=http://forum.princed.org>here</a>.
+</div>
+<pre>
+
+(c) 2003 - Copyleft Princed Development Team
+           http://www.princed.org
+
+Last update: 2005-06-08 23:11 UTC-3</pre>

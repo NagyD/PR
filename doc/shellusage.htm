@@ -1,0 +1,371 @@
+<h3>PR 0.9-R2 Compilation, shell commands and running samples</h3>
+
+<h4>Legend</h4>
+<ul>
+<li><font color=blue>OS Command line</font></li>
+<li><font color=red>Typed by user</font></li>
+<li><font color=green>Output text</font></li>
+</ul>
+
+<h4>1) Shell Example of LCC Compilation under Win32</h4>
+<pre>
+<font color=blue>C:\princed\src&gt;</font><font color=red>set path=%path%;c:\lcc\bin
+
+</font><font color=blue>C:\princed\src&gt;</font><font color=red>path
+</font><font color=green>PATH=C:\WINDOWS;C:\WINDOWS\COMMAND;<b>C:\LCC\BIN</b>
+
+</font><font color=blue>C:\princed\src&gt;</font><font color=red>ren makefile makefile.gcc
+
+</font><font color=blue>C:\princed\src&gt;</font><font color=red>ren makefile.lcc makefile
+
+</font><font color=blue>C:\princed\src&gt;</font><font color=red>make
+</font><font color=green>Compiling import module...
+Compiling compression module...
+Compiling export module...
+Compiling main module in standard mode...
+Compiling resource manager module...
+Compiling extra tasks module...
+Compiling disk access functions...
+Compiling xml parsing module...
+Compiling xml search features...
+Compiling bitmap files support (bmp)...
+Compiling midi audio files support (mid)...
+Compiling JASC palette support (pal)...
+Compiling digital wave audio support (wav)...
+Compiling prince level files support (plv)...
+Compiling memory manager...
+Porting the dirent structure...
+Porting the Unix-like getopt function (first part)...
+Porting the Unix-like getopt function (second part)...
+Linking files...
+<b>Program successfully compiled</b>
+
+Please read readme.txt for syntax information
+
+Time: 9.89 seconds
+
+</font><font color=blue>C:\princed\src&gt;</font>
+</pre>
+<h4>2) Shell Example of a normal GCC Compilation under several unix-like OS</h4>
+<pre>
+<font color=blue>-shell-2.05b$</font><font color=red> make
+</font><font color=green>Compiling import module...
+Compiling compression module...
+Compiling export module...
+Compiling resource manager module...
+Compiling extra tasks module...
+Compiling disk access functions...
+Compiling xml parsing module...
+Compiling xml search features...
+Compiling bitmap files support (bmp)...
+Compiling midi audio files support (mid)...
+Compiling JASC palette support (pal)...
+Compiling digital wave audio support (wav)...
+Compiling prince level files support (plv)...
+Compiling memory manager...
+Compiling main module in standard mode...
+Uncompressing resources...
+Linking files...
+<b>Program successfully compiled</b>
+
+Please read readme.txt for syntax information
+
+</font><font color=blue>-shell-2.05b$</font>
+</pre>
+<h4>2.1) Clearing object files</h4>
+<pre>
+<font color=blue>-shell-2.05b$</font><font color=red> make clean
+</font><font color=green>Erasing temporary object files...
+</font><font color=blue>-shell-2.05b$</font>
+</pre>
+<h4>2.2) Build Example</h4>
+<pre>
+<font color=blue>-shell-2.05b$</font><font color=red> make build
+</font><font color=green>Erasing temporary object files...
+Compiling import module...
+Compiling compression module...
+Compiling export module...
+Compiling resource manager module...
+Compiling extra tasks module...
+Compiling disk access functions...
+Compiling xml parsing module...
+Compiling xml search features...
+Compiling bitmap files support (bmp)...
+Compiling midi audio files support (mid)...
+Compiling JASC palette support (pal)...
+Compiling digital wave audio support (wav)...
+Compiling prince level files support (plv)...
+Compiling memory manager...
+Compiling main module in standard mode...
+Linking files...
+<b>Program successfully compiled</b>
+
+Please read readme.txt for syntax information
+
+</font><font color=blue>-shell-2.05b$</font>
+</pre>
+<h4>2.3) Problems with old Make versions. Very common in BSD systems</h4>
+<pre>
+<font color=blue>-shell-2.05b$</font><font color=red> make
+</font><font color=green>"Makefile", line 9: Missing dependency operator
+"Makefile", line 13: Need an operator
+"Makefile", line 16: Need an operator
+<b>make: fatal errors encountered -- cannot continue</b>
+</font><font color=blue>-shell-2.05b$</font><font color=red> mv Makefile Makefile.new
+</font><font color=blue>-shell-2.05b$</font><font color=red> mv Makefile.old Makefile
+</font><font color=blue>-shell-2.05b$</font><font color=red> make
+</font><font color=green>Compiling import module...
+Compiling compression module...
+Compiling export module...
+Compiling resource manager module...
+Compiling extra tasks module...
+Compiling disk access functions...
+Compiling xml parsing module...
+Compiling xml search features...
+Compiling bitmap files support (bmp)...
+Compiling midi audio files support (mid)...
+Compiling JASC palette support (pal)...
+Compiling digital wave audio support (wav)...
+Compiling prince level files support (plv)...
+Compiling memory manager...
+Porting the Unix-like getopt function (first part)...
+Porting the Unix-like getopt function (second part)...
+Compiling main module in standard mode...
+Linking files...
+Program successfully compiled
+
+Please read readme.txt for syntax information
+
+Compiling main module in library mode...
+Making dynamic library...
+Library successfully compiled
+
+Please read readme.coders.txt and pr.h for interfaces
+
+</font><font color=blue>-shell-2.05b$</font>
+</pre>
+<h4>2.4) PR Running Example</h4>
+<pre>
+<font color=blue>-shell-2.05b$</font><font color=red> cd bin
+</font><font color=blue>-shell-2.05b$</font><font color=red> ./pr
+</font><font color=green>Princed resources (PR) V0.9-R2 FreeBSD
+(c) Copyright 2003 - Princed Development Team
+http://www.princed.org
+
+Usage:
+  pr [-x[EXTRACTDIR]|-c[COMPILEDIR]|-d] [DATFILEPATH]
+  pr [OPTIONS] [DATFILEPATH]
+
+  Mandatory arguments to long options are mandatory for short options too.
+
+   -c, --import[=DIRNAME]     imports from DIRNAME into given dat file
+   -d, --classify             returns the DAT file type
+   -x, -e, --export[=DIRNAME] extracts given dat file into DIRNAME
+
+   -a, --setauthor=NAME       sets your name in extracted PLV files
+   -b, --backup[=EXTENSION]   backup your files
+   -f, --force                default option, you cannot disable it,
+                              so please make a backup of your files
+   -g, --cgi                  run as CGI and output mime headers
+   -h, -?, --help             display this help and exit
+   -m, --resource=RESFILE     uses an user-specific resource xml file
+   -r, --raw                  uses raw format
+   -R, --recursive            searches for all dat files (only if DATFILEPATH
+                              is not a dat file)
+   -t, --datfile=DATFILE      specifies a dat file to read resources
+                              different than the original file
+       --unknown              generate the unknown file without performing
+                              any extraction
+   -v, --verbose              explain what is being done
+       --version              output version information and exit
+
+</font><font color=blue>-shell-2.05b$</font>
+</pre>
+<h4>2.5) Version about</h4>
+<pre>
+<font color=blue>-bash-2.05b$</font><font color=red> cd bin
+</font><font color=blue>-bash-2.05b$</font><font color=red> ./pr --version
+</font><font color=green>Princed resources (PR) V0.9-R2 NetBSD
+(c) Copyright 2003 - Princed Development Team
+http://www.princed.org
+
+Authors:
+   Coding &amp; main routines
+    Enrique Calot
+    Santiago Zamora
+
+   Graphic compression algorithms
+    Tammo Jan Dijkema
+    Enrique Calot
+
+   Graphic format development
+    Tammo Jan Dijkema
+    Anke Balderer
+
+   MID Sound format development
+    Christian Lundheim
+
+   Resources.xml edition
+    Steven Fayers
+
+</font><font color=blue>-bash-2.05b$</font>
+</pre>
+<h4>2.6) Windows running examples</h4>
+<pre>
+<font color=blue>C:\princed\src\bin&gt;</font><font color=red>pr -xdir c:\prince
+
+</font><font color=green>Princed resources (PR) V0.9-R2 Win32
+(c) Copyright 2003 - Princed Development Team
+http://www.princed.org
+
+Scanning dat files in given directory
+Extracting 'c:\prince\CDUNGEON.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\CPALACE.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\DIGISND1.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\DIGISND2.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\DIGISND3.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\EDUNGEON.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\EPALACE.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\FAT.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\GUARD.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\GUARD1.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\GUARD2.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\IBM_SND1.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\IBM_SND2.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\KID.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\MIDISND1.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\MIDISND2.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\PRINCE.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\PV.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\SHADOW.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\SKEL.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\TITLE.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\VDUNGEON.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\VIZIER.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\VPALACE.DAT' to 'dir'
+Result: Ok (0)
+Extracting 'c:\prince\levels.dat' to 'dir'
+Result: Ok (0)
+
+</font><font color=blue>C:\princed\src\bin&gt;</font><font color=red>cd dir
+
+</font><font color=blue>C:\princed\src\bin\dir&gt;</font><font color=red>dir
+
+</font><font color=green> Drive C label is PRTEST
+ Serial number id 1380-0FE3
+ Directory of C:\princed\src\bin\dir
+
+.              &lt;DIR&gt;        02-15-04 10:37p .
+..             &lt;DIR&gt;        02-15-04 10:37p ..
+UNKNOWN        &lt;DIR&gt;        02-15-04 10:37p unknown
+DIGISND1       &lt;DIR&gt;        02-15-04 10:37p digisnd1
+DIGISND2       &lt;DIR&gt;        02-15-04 10:37p digisnd2
+DIGISND3       &lt;DIR&gt;        02-15-04 10:37p digisnd3
+FAT            &lt;DIR&gt;        02-15-04 10:37p fat
+GUARDS         &lt;DIR&gt;        02-15-04 10:37p guards
+IBM_SND1       &lt;DIR&gt;        02-15-04 10:37p ibm_snd1
+IBM_SND2       &lt;DIR&gt;        02-15-04 10:37p ibm_snd2
+KID            &lt;DIR&gt;        02-15-04 10:37p kid
+MIDISND1       &lt;DIR&gt;        02-15-04 10:37p midisnd1
+MIDISND2       &lt;DIR&gt;        02-15-04 10:37p midisnd2
+PRINCE         &lt;DIR&gt;        02-15-04 10:37p prince
+PV             &lt;DIR&gt;        02-15-04 10:37p pv
+SHADOW         &lt;DIR&gt;        02-15-04 10:38p shadow
+SKEL           &lt;DIR&gt;        02-15-04 10:38p skel
+TITLE          &lt;DIR&gt;        02-15-04 10:38p title
+VDUNGEON       &lt;DIR&gt;        02-15-04 10:38p vdungeon
+VIZIER         &lt;DIR&gt;        02-15-04 10:38p vizier
+VPALACE        &lt;DIR&gt;        02-15-04 10:38p vpalace
+LEVELS         &lt;DIR&gt;        02-15-04 10:38p levels
+         0 files                 0 bytes
+        22 directories     394,055,680 free bytes
+
+</font></pre><small><b>Note</b>: now you can edit the files in each of those directories</small><pre>
+
+<font color=blue>C:\princed\src\bin\dir&gt;</font><font color=red>cd ..
+
+</font><font color=blue>C:\princed\src\bin&gt;</font><font color=red>pr -cdir c:\prince
+
+</font><font color=green>Princed resources (PR) V0.9-R2 Win32
+(c) Copyright 2003 - Princed Development Team
+http://www.princed.org
+
+Importing all valid files from given directory
+Compiling 'c:\prince\title.dat' from 'dir'
+File title.dat already exists. Replace? [Y/n/a]:y
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\vdungeon.dat' from 'dir'
+File vdungeon.dat already exists. Replace? [Y/n/a]:y
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\vpalace.dat' from 'dir'
+File vpalace.dat already exists. Replace? [Y/n/a]:a
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\pv.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\prince.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\kid.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\midisnd1.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\midisnd2.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\digisnd1.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\digisnd2.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\digisnd3.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\ibm_snd1.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\ibm_snd2.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\skel.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\vizier.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\shadow.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\fat.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\guard.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\guard1.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\guard2.dat' from 'dir'
+Result: File succesfully compiled (0)
+Compiling 'c:\prince\levels.dat' from 'dir'
+Result: File succesfully compiled (0)
+
+</font><font color=blue>C:\princed\src\bin&gt;</font>
+</pre>
+<hr size=1 color=red>
+<pre>
+
+(c) 2003 - Copyleft Princed Development Team
+           http://www.princed.org
+
+Last update: 2004-02-18 15:06 UTC-3</pre>

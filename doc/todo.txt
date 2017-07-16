@@ -1,0 +1,50 @@
+-------------------------------------------------
+The features and changes listed below are planned for future versions.
+-------------------------------------------------
+x Some palettes are still incorrect, namely:
+  caverns.dat: 4225..4235
+  final.dat: 4050..4105, 4125..4189
+  rooftops.dat: 4150..4177, 4350..4352
+  ruins.dat: 4200..4207, 4600..4602
+  trans.dat: 4208..4209, 25379..25380
+  The problem is that some palette resources contain multiple palettes, and these images would use the second (or the third) palette.
+  We need a way to include this information in resources.xml (or more precisely, pop2.xml).
+x PR hangs if too many files to import don't exist.
+x In a partial export, an image will have wrong colors if you don't export its palette.
+x The loop flag is not handled yet. 0x80 is added to the type byte of sounds if they are meant to be looped. In PoP1 it is set only in "level door opening" (10015).
+  Ideally, WAV should have some means of keeping this information, but if it doesn't, then maybe put it into resources.xml.
+x Some WAV files have different layout than those that are written by PR. This means that there are extra chunks before or after the "data" chunk.
+  The most frequent extra chunks are "fact" (it is present only in compressed WAVs, which we don't support anyway) and "LIST" (usually author info).
+  PR currently signals an error if there are any extra chunks.
+x PR currently rejects WAV files if they are not 8-bit. Maybe convert 16-bit waves to 8-bit instead of rejecting? (PoP1 supports only 8-bit waves.)
+x Add STRL decoding/encoding. There is no compression here.
+x Compression level should be 7 by default.
+
+x Add a fatal error check when importing from a different palette size and a
+  warning when importing from an incorrect palette.
+x Added full POP2 RLEC decompression algorithm
+x Add the pop2 4-bits palette object
+x Check for memory leak
+x Clean the source
+x Common factor in LGZ compression (a .h) for win size, etc.
+x Common palette calculation
+x Create a new isDirSep in disk.h and handle all the / and \ as the same char
+x Don't create empry unknown.xml
+x Fix ./pr -ie it -f bug
+x Fix repeated resource name in CPALACE.DAT bug
+x Fork compress to code images as a new object in a separated file
+x Move tResource* from reslist to types.h
+x Rename "uncompress" to "decomporess"
+x Replaced .bmp by .png files.
+x Transform flags from the hex form to the [a-y]* form
+  (a is 1, b is 2, c is 4...)
+x Added full POP2 RLEC compression algorithm
+x Code a palette adapting feature
+x Finish python interface
+x Fix buffer overflows (in entered filename sizes)
+x Tested and make very stable
+x Source cleaned
+x Add full POP2 support
+x Optimized & stable version for win32 and UNIX based systems
+x Set, if applicable, POP2 in the parent folder of the unknown.xml file
+-------------------------------------------------

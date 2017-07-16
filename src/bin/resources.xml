@@ -1,0 +1,2423 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE resources SYSTEM "http://www.princed.org/standards/xml/resources/std1.dtd">
+<!--
+    Princed V3 - Prince of Persia Level Editor for PC Version
+    Copyright (C) 2003-2005 Princed Development Team
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+    The authors of this program may be contacted at http://forum.princed.org
+-->
+
+<!--
+resources.xml: Princed Resources : Resource tree
+
+ Copyright 2003, 2004, 2005 Princed Development Team
+  Created: 03 Nov 2003
+
+  Authors: Steven Fayers (ecco3@users.sourceforge.net)
+           Enrique Calot (ecalot@users.sourceforge.net)
+  Version: 0.6 (2003-Nov-03)
+
+  Modified by: Enrique Calot (ecalot@users.sourceforge.net)
+  Version: 0.7.4 (2004-Feb-21)
+  Version: 0.7.5 (2004-Feb-24)
+  Version: 0.7.6 (2004-Feb-26)
+  Version: 0.7.7 (2004-Feb-28)
+  Version: 0.8.1 (2004-Mar-11)
+  Version: 0.8.2 (2005-Mar-26)
+  Version: 1.0.0 (2005-Jun-04)
+
+  Modified by: David from Princed
+  Version: (2012-Sep-02)
+
+ Note:
+  DO NOT remove this copyright notice
+-->
+
+<resources version="1.0">
+ <folder index="pop1" name="binary" file="title.dat" path="title" type="image">
+  <folder path="texts" colors="2">
+   <item value="42" path="in the absence.bmp"/>
+   <item value="43" path="marry jaffar.bmp"/>
+   <item value="44" path="the tyrant.bmp"/>
+   <item value="45" path="credits.bmp"/>
+  </folder>
+  <folder path="main titles">
+   <item value="40" path="text background.pal" type="palette-pop1-4bits"/>
+   <item value="41" path="text background.bmp" palette="40"/>
+   <item value="50" path="titles.pal" type="palette-pop1-4bits"/>
+   <folder palette="50">
+    <item value="51" path="main background.bmp"/>
+    <item value="52" path="presents.bmp"/>
+    <item value="53" path="author.bmp"/>
+    <item value="54" path="game name.bmp"/>
+    <item value="55" path="copyright.bmp"/>
+   </folder>
+  </folder>
+ </folder>
+
+ <folder type="image" index="pop1" name="vga dungeon enviornment" file="vdungeon.dat" path="vdungeon" palette="200">
+  <folder type="palette-pop1-4bits" name="palette" path="palette">
+   <item value="200" path="dungeon.pal"/>
+   <item value="360" path="walls.pal"/>
+  </folder>
+  <folder name="big pillar" path="big pillar">
+   <item value="1286" path="big pillar lower left.bmp"/>
+   <item value="1287" path="big pillar lower right.bmp"/>
+   <item value="1288" path="big pillar lower front.bmp"/>
+   <item value="1289" path="big pillar upper right.bmp"/>
+   <item value="1290" path="big pillar upper right top.bmp"/>
+   <item value="1291" path="big pillar upper left.bmp"/>
+  </folder>
+  <folder name="chomper" path="chomper">
+   <item value="1301" path="frame03.bmp"/>
+   <item value="1302" path="frame04.bmp"/>
+   <item value="1303" path="frame02 bottom.bmp"/>
+   <item value="1304" path="frame01 bottom.bmp"/>
+   <item value="1305" path="frame05 bottom.bmp"/>
+   <item value="1306" path="frame03 front.bmp"/>
+   <item value="1307" path="frame04 front.bmp"/>
+   <item value="1308" path="frame02 front.bmp"/>
+   <item value="1309" path="frame01 front.bmp"/>
+   <item value="1310" path="frame05 front.bmp"/>
+   <item value="1311" path="frame02 top.bmp"/>
+   <item value="1312" path="frame01 top.bmp"/>
+   <item value="1313" path="frame05 top.bmp"/>
+   <folder name="blood" path="blood" colors="2">
+   <item value="1314" path="frame03.bmp"/>
+   <item value="1315" path="frame04.bmp"/>
+   <item value="1316" path="frame02.bmp"/>
+   <item value="1317" path="frame01.bmp"/>
+   <item value="1318" path="frame05.bmp"/>
+   <item value="1319" path="frame03 front.bmp"/>
+   <item value="1320" path="frame04 front.bmp"/>
+   <item value="1321" path="frame02 front.bmp"/>
+   <item value="1322" path="frame01 front.bmp"/>
+   <item value="1323" path="frame05 front.bmp"/>
+   </folder>
+  </folder>
+  <folder name="spikes" path="spikes">
+   <item value="1328" path="frame01 left.bmp"/>
+   <item value="1329" path="frame02 left.bmp"/>
+   <item value="1330" path="frame03 left.bmp"/>
+   <item value="1331" path="frame04 left.bmp"/>
+   <item value="1332" path="frame05 left.bmp"/>
+   <item value="1334" path="frame01 right.bmp"/>
+   <item value="1335" path="frame02 right.bmp"/>
+   <item value="1336" path="frame03 right.bmp"/>
+   <item value="1337" path="frame04 right.bmp"/>
+   <item value="1338" path="frame05 right.bmp"/>
+   <item value="1339" path="frame01 front.bmp"/>
+   <item value="1340" path="frame02 front.bmp"/>
+   <item value="1341" path="frame03 front.bmp"/>
+   <item value="1342" path="frame04 front.bmp"/>
+   <item value="1343" path="frame05 front.bmp"/>
+  </folder>
+  <folder name="level door" path="level door">
+   <item value="233" path="door bottom.bmp"/>
+   <item value="234" path="door top.bmp"/>
+   <item value="237" path="frame lower left.bmp"/>
+   <item value="238" path="frame upper left.bmp"/>
+   <item value="239" path="frame lower right.bmp"/>
+   <item value="240" path="frame upper right.bmp"/>
+   <item value="299" path="floor.bmp"/>
+   <item value="344" path="stairs.bmp"/>
+  </folder>
+  <folder name="door" path="door">
+   <item value="246" path="door frame left.bmp"/>
+   <item value="247" path="door frame right.bmp"/>
+   <item value="248" path="door frame right top.bmp"/>
+   <item value="249" path="door frame left pole.bmp"/>
+   <item value="250" path="res00250.bmp"/>
+   <item value="251" path="res00251.bmp"/>
+   <item value="252" path="res00252.bmp"/>
+   <item value="253" path="res00253.bmp"/>
+   <item value="254" path="res00254.bmp"/>
+   <item value="255" path="res00255.bmp"/>
+   <item value="256" path="res00256.bmp"/>
+   <item value="257" path="res00257.bmp"/>
+   <item value="258" path="res00258.bmp"/>
+   <item value="259" path="res00259.bmp"/>
+   <item value="260" path="res00260.bmp"/>
+   <item value="261" path="res00261.bmp"/>
+   <item value="262" path="res00262.bmp"/>
+   <item value="263" path="res00263.bmp"/>
+   <item value="264" path="res00264.bmp"/>
+   <item value="265" path="res00265.bmp"/>
+   <item value="266" path="res00266.bmp"/>
+   <item value="267" path="res00267.bmp"/>
+   <item value="285" path="res00285.bmp"/>
+   <item value="268" path="res268.bmp" colors="2"/>
+  </folder>
+  <folder name="pillar" path="pillar">
+   <item value="292" path="pillar left.bmp"/>
+   <item value="293" path="pillar right main.bmp"/>
+   <item value="294" path="pillar right top.bmp"/>
+   <item value="295" path="pillar front.bmp"/>
+  </folder>
+  <folder name="floor panels" path="floor panels">
+   <item value="297" path="broken left.bmp"/>
+   <item value="300" path="broken front.bmp"/>
+   <item value="298" path="broken right.bmp"/>
+   <item value="1327" path="spikes left.bmp"/>
+   <item value="1333" path="spikes right.bmp"/>
+   <item value="1230" path="skeleton left.bmp"/>
+   <item value="1231" path="skeleton right.bmp"/>
+   <item value="241" path="normal left.bmp"/>
+   <item value="242" path="normal right.bmp"/>
+   <item value="243" path="normal base.bmp"/>
+   <item value="269" path="loose left01.bmp"/>
+   <item value="270" path="loose left02.bmp"/>
+   <item value="271" path="loose right01.bmp"/>
+   <item value="272" path="loose right02.bmp"/>
+   <item value="273" path="loose base01.bmp"/>
+   <item value="274" path="loose base02.bmp"/>
+   <item value="235" path="closer right pressed.bmp"/>
+   <item value="296" path="closer base unpressed.bmp"/>
+   <item value="236" path="closer base pressed.bmp"/>
+   <item value="347" path="opener left unpressed.bmp"/>
+   <item value="348" path="opener left unpressed02.bmp"/>
+   <item value="349" path="opener base unpressed.bmp"/>
+   <item value="350" path="front01.bmp"/>
+   <item value="351" path="front02.bmp"/>
+   <item value="232" path="front03.bmp"/>
+  </folder>
+  <folder name="background" path="background">
+   <item value="324" path="bricks03.bmp"/>
+   <item value="325" path="bricks04.bmp"/>
+   <item value="326" path="window.bmp"/>
+   <item value="244" path="bricks01.bmp"/>
+   <item value="245" path="bricks02.bmp"/>
+   <item value="346" path="torch.bmp"/>
+  </folder>
+  <folder name="walls" path="walls" palette="360">
+   <item value="361" path="face stack main.bmp"/>
+   <item value="362" path="face stack top.bmp"/>
+   <item value="363" path="centre stack base.bmp"/>
+   <item value="364" path="centre stack main.bmp"/>
+   <item value="365" path="right stack base.bmp"/>
+   <item value="366" path="right stack main.bmp"/>
+   <item value="367" path="single stack base.bmp"/>
+   <item value="368" path="single stack main.bmp"/>
+   <item value="369" path="left stack base.bmp"/>
+   <item value="370" path="left stack main.bmp"/>
+   <item value="371" path="divider01.bmp"/>
+   <item value="372" path="divider02.bmp"/>
+   <item value="373" path="random block.bmp"/>
+   <item value="374" path="mark01.bmp"/>
+   <item value="375" path="mark02.bmp"/>
+   <item value="376" path="mark03.bmp"/>
+   <item value="377" path="mark04.bmp"/>
+  </folder>
+  <folder name="binary" path="binary" type="binary">
+   <item value="201" path="res201.bin"/>
+   <item value="202" path="res202.bin"/>
+   <item value="203" path="res203.bin"/>
+   <item value="204" path="res204.bin"/>
+   <item value="205" path="res205.bin"/>
+   <item value="206" path="res206.bin"/>
+   <item value="207" path="res207.bin"/>
+   <item value="208" path="res208.bin"/>
+   <item value="209" path="res209.bin"/>
+   <item value="210" path="res210.bin"/>
+   <item value="211" path="res211.bin"/>
+   <item value="212" path="res212.bin"/>
+   <item value="213" path="res213.bin"/>
+   <item value="214" path="res214.bin"/>
+   <item value="215" path="res215.bin"/>
+   <item value="216" path="res216.bin"/>
+   <item value="217" path="res217.bin"/>
+   <item value="218" path="res218.bin"/>
+   <item value="219" path="res219.bin"/>
+   <item value="220" path="res220.bin"/>
+   <item value="221" path="res221.bin"/>
+   <item value="222" path="res222.bin"/>
+   <item value="223" path="res223.bin"/>
+   <item value="224" path="res224.bin"/>
+   <item value="225" path="res225.bin"/>
+   <item value="226" path="res226.bin"/>
+   <item value="227" path="res227.bin"/>
+   <item value="228" path="res228.bin"/>
+   <item value="229" path="res229.bin"/>
+   <item value="230" path="res230.bin"/>
+   <item value="231" path="res231.bin"/>
+   <item value="275" path="res275.bin"/>
+   <item value="276" path="res276.bin"/>
+   <item value="277" path="res277.bin"/>
+   <item value="278" path="res278.bin"/>
+   <item value="279" path="res279.bin"/>
+   <item value="280" path="res280.bin"/>
+   <item value="281" path="res281.bin"/>
+   <item value="282" path="res282.bin"/>
+   <item value="283" path="res283.bin"/>
+   <item value="284" path="res284.bin"/>
+   <item value="286" path="res286.bin"/>
+   <item value="287" path="res287.bin"/>
+   <item value="288" path="res288.bin"/>
+   <item value="289" path="res289.bin"/>
+   <item value="290" path="res290.bin"/>
+   <item value="291" path="res291.bin"/>
+   <item value="301" path="res301.bin"/>
+   <item value="302" path="res302.bin"/>
+   <item value="303" path="res303.bin"/>
+   <item value="304" path="res304.bin"/>
+   <item value="305" path="res305.bin"/>
+   <item value="306" path="res306.bin"/>
+   <item value="307" path="res307.bin"/>
+   <item value="308" path="res308.bin"/>
+   <item value="309" path="res309.bin"/>
+   <item value="310" path="res310.bin"/>
+   <item value="311" path="res311.bin"/>
+   <item value="312" path="res312.bin"/>
+   <item value="313" path="res313.bin"/>
+   <item value="314" path="res314.bin"/>
+   <item value="315" path="res315.bin"/>
+   <item value="316" path="res316.bin"/>
+   <item value="317" path="res317.bin"/>
+   <item value="318" path="res318.bin"/>
+   <item value="319" path="res319.bin"/>
+   <item value="320" path="res320.bin"/>
+   <item value="321" path="res321.bin"/>
+   <item value="322" path="res322.bin"/>
+   <item value="323" path="res323.bin"/>
+   <item value="327" path="res327.bin"/>
+   <item value="328" path="res328.bin"/>
+   <item value="329" path="res329.bin"/>
+   <item value="330" path="res330.bin"/>
+   <item value="331" path="res331.bin"/>
+   <item value="332" path="res332.bin"/>
+   <item value="333" path="res333.bin"/>
+   <item value="334" path="res334.bin"/>
+   <item value="335" path="res335.bin"/>
+   <item value="336" path="res336.bin"/>
+   <item value="337" path="res337.bin"/>
+   <item value="338" path="res338.bin"/>
+   <item value="339" path="res339.bin"/>
+   <item value="340" path="res340.bin"/>
+   <item value="341" path="res341.bin"/>
+   <item value="342" path="res342.bin"/>
+   <item value="343" path="res343.bin"/>
+   <item value="345" path="res345.bin"/>
+  </folder>
+
+ </folder>
+
+ <folder type="image" index="pop1" name="vga palace enviornment" file="vpalace.dat" path="vpalace" palette="200">
+  <folder path="palettes" name="palettes" type="palette-pop1-4bits">
+   <item value="200" path="palace.pal"/>
+   <item value="360" path="wall.pal"/>
+  </folder>
+
+  <folder name="carpets" path="carpets">
+   <item value="1280" path="style01.bmp"/>
+   <item value="1281" path="style01 top.bmp"/>
+   <item value="1282" path="style02.bmp"/>
+   <item value="1283" path="style02 top.bmp"/>
+  </folder>
+
+  <folder name="arch" path="arch">
+   <item value="1201" path="down part.bmp"/>
+   <item value="1202" path="down part base.bmp"/>
+   <item value="1203" path="up part small.bmp"/>
+   <item value="1204" path="up part big left.bmp"/>
+   <item value="1205" path="up part big right.bmp"/>
+   <item value="1206" path="up part with pole.bmp"/>
+   <item value="1209" path="other.bmp"/>
+   <item value="1278" path="up part with carpet wall.bmp"/>
+  </folder>
+
+  <folder name="balcony" path="balcony">
+   <item value="1210" path="lower left.bmp"/>
+   <item value="1211" path="upper left.bmp"/>
+   <item value="1212" path="lower right.bmp"/>
+   <item value="1213" path="upper right.bmp"/>
+  </folder>
+
+  <folder name="mirror" path="mirror">
+   <item value="1275" path="mirror and floor.bmp"/>
+   <item value="1277" path="mirror.bmp"/>
+  </folder>
+
+  <folder name="pillar" path="pillar">
+   <item value="292" path="pillar left.bmp"/>
+   <item value="293" path="pillar right main.bmp"/>
+   <item value="294" path="pillar right top.bmp"/>
+   <item value="295" path="pillar front.bmp"/>
+  </folder>
+
+  <folder name="walls" path="walls" palette="360">
+   <item value="361" path="face stack main.bmp"/>
+   <item value="362" path="face stack top.bmp"/>
+   <item value="363" path="res363.bmp"/>
+   <item value="364" path="res364.bmp"/>
+   <item value="365" path="res365.bmp"/>
+   <item value="375" path="res375.bmp"/>
+   <item value="376" path="res376.bmp"/>
+   <item value="377" path="res377.bmp"/>
+   <folder name="patterns" colors="2">
+   <item value="366" path="res366.bmp"/>
+   <item value="367" path="res367.bmp"/>
+   <item value="368" path="res368.bmp"/>
+   <item value="369" path="res369.bmp"/>
+   <item value="370" path="res370.bmp"/>
+   <item value="371" path="res371.bmp"/>
+   <item value="372" path="res372.bmp"/>
+   <item value="373" path="res373.bmp"/>
+   <item value="374" path="res374.bmp"/>
+   </folder>
+  </folder>
+
+  <folder name="floor panels" path="floor panels">
+   <item value="236" path="closer base.bmp"/>
+   <item value="297" path="broken left.bmp"/>
+   <item value="300" path="broken front.bmp"/>
+   <item value="298" path="broken right.bmp"/>
+   <item value="1327" path="spikes left.bmp"/>
+   <item value="1333" path="spikes right.bmp"/>
+   <item value="241" path="normal left.bmp"/>
+   <item value="242" path="normal right.bmp"/>
+   <item value="243" path="normal base.bmp"/>
+   <item value="269" path="loose left01.bmp"/>
+   <item value="270" path="loose left02.bmp"/>
+   <item value="271" path="loose right01.bmp"/>
+   <item value="272" path="loose right02.bmp"/>
+   <item value="273" path="loose base01.bmp"/>
+   <item value="274" path="loose base02.bmp"/>
+   <item value="296" path="closer base unpressed.bmp"/>
+   <item value="347" path="opener left unpressed.bmp"/>
+   <item value="235" path="opener left unpressed02.bmp"/>
+   <item value="349" path="opener base unpressed.bmp"/>
+   <item value="350" path="front01.bmp"/>
+   <item value="351" path="front02.bmp"/>
+   <item value="232" path="front03.bmp"/>
+  </folder>
+
+  <folder name="background" path="background">
+   <item value="324" path="bricks03.bmp"/>
+   <item value="325" path="bricks04.bmp"/>
+   <item value="326" path="window.bmp"/>
+   <item value="244" path="bricks01.bmp"/>
+   <item value="245" path="bricks02.bmp"/>
+   <item value="346" path="torch.bmp"/>
+   <item value="284" path="other01.bmp"/>
+   <item value="345" path="other02.bmp"/>
+  </folder>
+
+  <folder name="big pillar" path="big pillar">
+   <item value="1286" path="big pillar lower left.bmp"/>
+   <item value="1287" path="big pillar lower right.bmp"/>
+   <item value="1288" path="big pillar lower front.bmp"/>
+   <item value="1289" path="big pillar upper right.bmp"/>
+   <item value="1290" path="big pillar upper right top.bmp"/>
+   <item value="1291" path="big pillar upper left.bmp"/>
+  </folder>
+
+  <folder name="door" path="door">
+   <item value="246" path="door frame left.bmp"/>
+   <item value="247" path="door frame right.bmp"/>
+   <item value="248" path="door frame right top.bmp"/>
+   <item value="249" path="door frame left pole.bmp"/>
+   <item value="250" path="res00250.bmp"/>
+   <item value="251" path="res00251.bmp"/>
+   <item value="252" path="res00252.bmp"/>
+   <item value="253" path="res00253.bmp"/>
+   <item value="254" path="res00254.bmp"/>
+   <item value="255" path="res00255.bmp"/>
+   <item value="256" path="res00256.bmp"/>
+   <item value="257" path="res00257.bmp"/>
+   <item value="258" path="res00258.bmp"/>
+   <item value="259" path="res00259.bmp"/>
+   <item value="260" path="res00260.bmp"/>
+   <item value="261" path="res00261.bmp"/>
+   <item value="262" path="res00262.bmp"/>
+   <item value="263" path="res00263.bmp"/>
+   <item value="264" path="res00264.bmp"/>
+   <item value="265" path="res00265.bmp"/>
+   <item value="266" path="res00266.bmp"/>
+   <item value="267" path="res00267.bmp"/>
+   <item value="285" path="res00285.bmp"/>
+   <item value="268" path="res268.bmp" colors="2"/>
+  </folder>
+
+  <folder name="level door" path="level door">
+   <item value="233" path="door bottom.bmp"/>
+   <item value="234" path="door top.bmp"/>
+   <item value="237" path="frame lower left.bmp"/>
+   <item value="238" path="frame upper left.bmp"/>
+   <item value="239" path="frame lower right.bmp"/>
+   <item value="240" path="frame upper right.bmp"/>
+   <item value="299" path="floor.bmp"/>
+   <item value="344" path="stairs.bmp"/>
+  </folder>
+
+  <folder name="spikes" path="spikes">
+   <item value="1328" path="frame01 left.bmp"/>
+   <item value="1329" path="frame02 left.bmp"/>
+   <item value="1330" path="frame03 left.bmp"/>
+   <item value="1331" path="frame04 left.bmp"/>
+   <item value="1332" path="frame05 left.bmp"/>
+   <item value="1334" path="frame01 right.bmp"/>
+   <item value="1335" path="frame02 right.bmp"/>
+   <item value="1336" path="frame03 right.bmp"/>
+   <item value="1337" path="frame04 right.bmp"/>
+   <item value="1338" path="frame05 right.bmp"/>
+   <item value="1339" path="frame01 front.bmp"/>
+   <item value="1340" path="frame02 front.bmp"/>
+   <item value="1341" path="frame03 front.bmp"/>
+   <item value="1342" path="frame04 front.bmp"/>
+   <item value="1343" path="frame05 front.bmp"/>
+  </folder>
+
+  <folder name="chomper" path="chomper">
+   <item value="1301" path="frame03.bmp"/>
+   <item value="1302" path="frame04.bmp"/>
+   <item value="1303" path="frame02.bmp"/>
+   <item value="1304" path="frame01.bmp"/>
+   <item value="1305" path="frame05.bmp"/>
+   <item value="1306" path="frame03 front.bmp"/>
+   <item value="1307" path="frame04 front.bmp"/>
+   <item value="1308" path="frame02 front.bmp"/>
+   <item value="1309" path="frame01 front.bmp"/>
+   <item value="1310" path="frame05 front.bmp"/>
+   <item value="1311" path="frame02 top.bmp"/>
+   <item value="1312" path="frame01 top.bmp"/>
+   <item value="1313" path="frame05 top.bmp"/>
+   <folder name="blood" path="blood" colors="2">
+   <item value="1314" path="frame03.bmp"/>
+   <item value="1315" path="frame04.bmp"/>
+   <item value="1316" path="frame02.bmp"/>
+   <item value="1317" path="frame01.bmp"/>
+   <item value="1318" path="frame05.bmp"/>
+   <item value="1319" path="frame03 front.bmp"/>
+   <item value="1320" path="frame04 front.bmp"/>
+   <item value="1321" path="frame02 front.bmp"/>
+   <item value="1322" path="frame01 front.bmp"/>
+   <item value="1323" path="frame05 front.bmp"/>
+   </folder>
+  </folder>
+
+  <folder name="binary" path="binary" type="binary">
+   <item value="1207" path="res1207.bin"/>
+   <item value="1208" path="res1208.bin"/>
+   <item value="1276" path="res1276.bin"/>
+   <item value="1279" path="res1279.bin"/>
+   <item value="201" path="res201.bin"/>
+   <item value="202" path="res202.bin"/>
+   <item value="203" path="res203.bin"/>
+   <item value="204" path="res204.bin"/>
+   <item value="205" path="res205.bin"/>
+   <item value="206" path="res206.bin"/>
+   <item value="207" path="res207.bin"/>
+   <item value="208" path="res208.bin"/>
+   <item value="209" path="res209.bin"/>
+   <item value="210" path="res210.bin"/>
+   <item value="211" path="res211.bin"/>
+   <item value="212" path="res212.bin"/>
+   <item value="213" path="res213.bin"/>
+   <item value="214" path="res214.bin"/>
+   <item value="215" path="res215.bin"/>
+   <item value="216" path="res216.bin"/>
+   <item value="217" path="res217.bin"/>
+   <item value="218" path="res218.bin"/>
+   <item value="219" path="res219.bin"/>
+   <item value="220" path="res220.bin"/>
+   <item value="221" path="res221.bin"/>
+   <item value="222" path="res222.bin"/>
+   <item value="223" path="res223.bin"/>
+   <item value="224" path="res224.bin"/>
+   <item value="225" path="res225.bin"/>
+   <item value="226" path="res226.bin"/>
+   <item value="227" path="res227.bin"/>
+   <item value="228" path="res228.bin"/>
+   <item value="229" path="res229.bin"/>
+   <item value="230" path="res230.bin"/>
+   <item value="231" path="res231.bin"/>
+   <item value="275" path="res275.bin"/>
+   <item value="276" path="res276.bin"/>
+   <item value="277" path="res277.bin"/>
+   <item value="278" path="res278.bin"/>
+   <item value="279" path="res279.bin"/>
+   <item value="280" path="res280.bin"/>
+   <item value="281" path="res281.bin"/>
+   <item value="282" path="res282.bin"/>
+   <item value="283" path="res283.bin"/>
+   <item value="286" path="res286.bin"/>
+   <item value="287" path="res287.bin"/>
+   <item value="288" path="res288.bin"/>
+   <item value="289" path="res289.bin"/>
+   <item value="290" path="res290.bin"/>
+   <item value="291" path="res291.bin"/>
+   <item value="301" path="res301.bin"/>
+   <item value="302" path="res302.bin"/>
+   <item value="303" path="res303.bin"/>
+   <item value="304" path="res304.bin"/>
+   <item value="305" path="res305.bin"/>
+   <item value="306" path="res306.bin"/>
+   <item value="307" path="res307.bin"/>
+   <item value="308" path="res308.bin"/>
+   <item value="309" path="res309.bin"/>
+   <item value="310" path="res310.bin"/>
+   <item value="311" path="res311.bin"/>
+   <item value="312" path="res312.bin"/>
+   <item value="313" path="res313.bin"/>
+   <item value="314" path="res314.bin"/>
+   <item value="315" path="res315.bin"/>
+   <item value="316" path="res316.bin"/>
+   <item value="317" path="res317.bin"/>
+   <item value="318" path="res318.bin"/>
+   <item value="319" path="res319.bin"/>
+   <item value="320" path="res320.bin"/>
+   <item value="321" path="res321.bin"/>
+   <item value="322" path="res322.bin"/>
+   <item value="323" path="res323.bin"/>
+   <item value="327" path="res327.bin"/>
+   <item value="328" path="res328.bin"/>
+   <item value="329" path="res329.bin"/>
+   <item value="330" path="res330.bin"/>
+   <item value="331" path="res331.bin"/>
+   <item value="332" path="res332.bin"/>
+   <item value="333" path="res333.bin"/>
+   <item value="334" path="res334.bin"/>
+   <item value="335" path="res335.bin"/>
+   <item value="336" path="res336.bin"/>
+   <item value="337" path="res337.bin"/>
+   <item value="338" path="res338.bin"/>
+   <item value="339" path="res339.bin"/>
+   <item value="340" path="res340.bin"/>
+   <item value="341" path="res341.bin"/>
+   <item value="342" path="res342.bin"/>
+   <item value="343" path="res343.bin"/>
+   <item value="348" path="res348.bin"/>
+  </folder>
+ </folder>
+
+ <folder index="pop1" name="binary" file="pv.dat" path="pv" palette="800" type="image">
+  <folder path="jaffar" palette="850">
+   <item value="850" path="palette.pal" type="palette-pop1-4bits"/>
+   <folder path="walking">
+    <item value="851" path="frame01.bmp"/>
+    <item value="852" path="frame02.bmp"/>
+    <item value="853" path="frame03.bmp"/>
+    <item value="854" path="frame04.bmp"/>
+    <item value="855" path="frame05.bmp"/>
+    <item value="856" path="frame06.bmp"/>
+    <item value="857" path="frame07.bmp"/>
+    <item value="858" path="frame08.bmp"/>
+    <item value="859" path="frame09.bmp"/>
+    <item value="860" path="frame10.bmp"/>
+    <item value="861" path="frame11.bmp"/>
+    <item value="862" path="frame12.bmp"/>
+    <item value="863" path="frame13.bmp"/>
+    <item value="864" path="frame14.bmp"/>
+    <item value="865" path="frame15.bmp"/>
+    <item value="866" path="frame16.bmp"/>
+    <item value="867" path="frame17.bmp"/>
+    <item value="868" path="frame18.bmp"/>
+    <item value="869" path="frame19.bmp"/>
+   </folder>
+   <folder path="conjuring">
+    <item value="870" path="frame20.bmp"/>
+    <item value="871" path="frame21.bmp"/>
+    <item value="872" path="frame22.bmp"/>
+    <item value="873" path="frame23.bmp"/>
+    <item value="874" path="frame24.bmp"/>
+    <item value="875" path="frame25.bmp"/>
+    <item value="876" path="frame26.bmp"/>
+    <item value="877" path="frame27.bmp"/>
+    <item value="878" path="frame28.bmp"/>
+    <item value="879" path="frame29.bmp"/>
+    <item value="880" path="frame30.bmp"/>
+    <item value="881" path="frame31.bmp"/>
+    <item value="882" path="frame32.bmp"/>
+    <item value="883" path="frame33.bmp"/>
+    <item value="884" path="frame34.bmp"/>
+    <item value="885" path="frame35.bmp"/>
+    <item value="886" path="frame36.bmp"/>
+    <item value="887" path="frame37.bmp"/>
+    <item value="888" path="frame38.bmp"/>
+   </folder>
+  </folder>
+
+  <folder path="princess" palette="900">
+   <item value="900" path="palette.pal" type="palette-pop1-4bits"/>
+   <item value="901" path="resting.bmp"/>
+   <item value="902" path="colour.bmp"/>
+   <folder path="in story" palette="800">
+    <item value="800" path="palette.pal" type="palette-pop1-4bits"/>
+    <item value="801" path="frame01.bmp"/>
+    <item value="802" path="frame02.bmp"/>
+    <item value="803" path="frame03.bmp"/>
+    <item value="804" path="frame04.bmp"/>
+    <item value="805" path="frame05.bmp"/>
+    <item value="806" path="frame06.bmp"/>
+    <item value="807" path="frame07.bmp"/>
+    <item value="808" path="frame08.bmp"/>
+    <item value="809" path="frame09.bmp"/>
+    <item value="810" path="frame10.bmp"/>
+    <item value="811" path="frame11.bmp"/>
+    <item value="812" path="frame12.bmp"/>
+    <item value="813" path="frame13.bmp"/>
+    <item value="814" path="frame14.bmp"/>
+    <item value="815" path="frame15.bmp"/>
+    <item value="816" path="frame16.bmp"/>
+    <item value="817" path="frame17.bmp"/>
+   </folder>
+   <folder path="winning">
+    <item value="903" path="frame01.bmp"/>
+    <item value="904" path="frame02.bmp"/>
+    <item value="905" path="frame03.bmp"/>
+    <item value="906" path="frame04.bmp"/>
+    <item value="907" path="frame05.bmp"/>
+    <item value="908" path="frame06.bmp"/>
+    <item value="909" path="frame07.bmp"/>
+    <item value="910" path="frame08.bmp"/>
+    <item value="911" path="frame09.bmp"/>
+    <item value="912" path="frame10.bmp"/>
+    <item value="913" path="frame11.bmp"/>
+    <item value="914" path="frame12.bmp"/>
+    <item value="915" path="frame13.bmp"/>
+    <item value="916" path="frame14.bmp"/>
+   </folder>
+   <folder path="with mouse">
+    <item value="917" path="frame01.bmp"/>
+    <item value="918" path="frame02.bmp"/>
+    <item value="919" path="frame03.bmp"/>
+    <item value="920" path="frame04.bmp"/>
+    <item value="921" path="frame05.bmp"/>
+    <item value="922" path="frame06.bmp"/>
+    <item value="923" path="frame07.bmp"/>
+    <item value="924" path="frame08.bmp"/>
+    <item value="925" path="frame09.bmp"/>
+    <item value="926" path="frame10.bmp"/>
+    <item value="927" path="frame11.bmp"/>
+    <item value="928" path="frame12.bmp"/>
+    <item value="929" path="frame13.bmp"/>
+    <item value="930" path="frame14.bmp"/>
+   </folder>
+  </folder>
+
+  <folder path="objects" palette="950">
+   <item value="950" path="room and clock.pal" type="palette-pop1-4bits"/>
+   <item value="951" path="room.bmp"/>
+   <item value="952" path="room pillar.bmp"/>
+   <item value="953" path="clock01.bmp"/>
+   <item value="954" path="clock02.bmp"/>
+   <item value="955" path="clock03.bmp"/>
+   <item value="956" path="clock04.bmp"/>
+   <item value="957" path="clock05.bmp"/>
+   <item value="958" path="clock06.bmp"/>
+   <item value="959" path="clock07.bmp"/>
+   <item value="960" path="clocksand01.bmp"/>
+   <item value="961" path="clocksand02.bmp"/>
+   <item value="962" path="clocksand03.bmp"/>
+   <item value="980" path="room bed.pal" type="palette-pop1-4bits"/>
+   <item value="981" path="room bed.bmp" palette="980"/>
+  </folder>
+ </folder>
+
+ <folder index="pop1" name="binary" file="prince.dat" path="prince" palette="150" type="image">
+  <item value="150" path="main.pal" type="palette-pop1-4bits"/>
+
+  <folder name="fire animation" path="fire" palette="150">
+   <item value="151" path="frame1.bmp"/>
+   <item value="152" path="frame2.bmp"/>
+   <item value="153" path="frame3.bmp"/>
+   <item value="154" path="frame4.bmp"/>
+   <item value="155" path="frame5.bmp"/>
+   <item value="156" path="frame6.bmp"/>
+   <item value="157" path="frame7.bmp"/>
+   <item value="158" path="frame8.bmp"/>
+   <item value="159" path="frame9.bmp"/>
+  </folder>
+
+  <folder name="binary stuff" path="binary">
+   <item value="1" path="midi info 1.bin" type="binary"/>
+   <item value="2" path="pcs info 2.bin" type="binary"/>
+   <item value="10" path="guard palettes.pal" type="palette-pop2-320cols"/>
+   <item value="20" path="level color variations.pal" type="palette-pop2-320cols"/><!-- PoP 1.3 and 1.4 -->
+   <item value="65535" path="res65535.bin" type="binary"/><!-- PoP 1.3 and 1.4 -->
+  </folder>
+
+  <folder name="potions" path="potions">
+   <folder name="base" path="base" palette="150">
+    <item value="162" path="small dungeon.bmp"/>
+    <item value="163" path="big dungeon.bmp"/>
+    <item value="164" path="small palace.bmp"/>
+    <item value="165" path="big palace.bmp"/>
+   </folder>
+
+   <folder name="bubble animation" path="bubble animation" colors="2">
+    <item value="166" path="frame01.bmp"/>
+    <item value="167" path="frame02.bmp"/>
+    <item value="168" path="frame03.bmp"/>
+    <item value="169" path="frame04.bmp"/>
+    <item value="170" path="frame05.bmp"/>
+    <item value="171" path="frame06.bmp"/>
+    <item value="172" path="frame07.bmp"/>
+    <item value="173" path="frameextra.bmp"/>
+   </folder>
+  </folder>
+
+  <folder name="sword" path="sword">
+   <folder name="in the floor" path="in the floor" palette="150">
+    <item value="160" path="normal.bmp"/>
+    <item value="161" path="bright.bmp"/>
+   </folder>
+
+   <folder name="fighting" path="fighting" palette="700">
+    <item value="700" path="sword.pal" type="palette-pop1-4bits"/>
+    <item value="701" path="sword01.bmp"/>
+    <item value="702" path="sword02.bmp"/>
+    <item value="703" path="sword03.bmp"/>
+    <item value="704" path="sword04.bmp"/>
+    <item value="705" path="sword05.bmp"/>
+    <item value="706" path="sword06.bmp"/>
+    <item value="707" path="sword07.bmp"/>
+    <item value="708" path="sword08.bmp"/>
+    <item value="709" path="sword09.bmp"/>
+    <item value="710" path="sword10.bmp"/>
+    <item value="711" path="sword11.bmp"/>
+    <item value="712" path="sword12.bmp"/>
+    <item value="713" path="sword13.bmp"/>
+    <item value="714" path="sword14.bmp"/>
+    <item value="715" path="sword15.bmp"/>
+    <item value="716" path="sword16.bmp"/>
+    <item value="717" path="sword17.bmp"/>
+    <item value="718" path="sword18.bmp"/>
+    <item value="719" path="sword19.bmp"/>
+    <item value="720" path="sword20.bmp"/>
+    <item value="721" path="sword21.bmp"/>
+    <item value="722" path="sword22.bmp"/>
+    <item value="723" path="sword23.bmp"/>
+    <item value="724" path="sword24.bmp"/>
+    <item value="725" path="sword25.bmp"/>
+    <item value="726" path="sword26.bmp"/>
+    <item value="727" path="sword27.bmp"/>
+    <item value="728" path="sword28.bmp"/>
+    <item value="729" path="sword29.bmp"/>
+    <item value="730" path="sword30.bmp"/>
+    <item value="731" path="sword31.bmp"/>
+    <item value="732" path="sword32.bmp"/>
+    <item value="733" path="sword33.bmp"/>
+    <item value="734" path="sword34.bmp"/>
+   </folder>
+  </folder>
+ </folder>
+
+
+ <folder index="pop1" name="binary" file="kid.dat" path="kid" palette="400" type="image">
+  <item value="400" path="kid.pal" type="palette-pop1-4bits"/>
+  <folder path="running">
+   <item value="401" path="frame01.bmp"/>
+   <item value="402" path="frame02.bmp"/>
+   <item value="403" path="frame03.bmp"/>
+   <item value="404" path="frame04.bmp"/>
+   <item value="405" path="frame05.bmp"/>
+   <item value="406" path="frame06.bmp"/>
+   <item value="407" path="frame07.bmp"/>
+   <item value="408" path="frame08.bmp"/>
+   <item value="409" path="frame09.bmp"/>
+   <item value="410" path="frame10.bmp"/>
+   <item value="411" path="frame11.bmp"/>
+   <item value="412" path="frame12.bmp"/>
+   <item value="413" path="frame13.bmp"/>
+   <item value="414" path="frame14.bmp"/>
+  </folder>
+  <item value="415" path="normal.bmp"/>
+  <folder path="simple jump">
+   <item value="416" path="frame01.bmp"/>
+   <item value="417" path="frame02.bmp"/>
+   <item value="418" path="frame03.bmp"/>
+   <item value="419" path="frame04.bmp"/>
+   <item value="420" path="frame05.bmp"/>
+   <item value="421" path="frame06.bmp"/>
+   <item value="422" path="frame07.bmp"/>
+   <item value="423" path="frame08.bmp"/>
+   <item value="424" path="frame09.bmp"/>
+   <item value="425" path="frame10.bmp"/>
+   <item value="426" path="frame11.bmp"/>
+   <item value="427" path="frame12.bmp"/>
+   <item value="428" path="frame13.bmp"/>
+   <item value="429" path="frame14.bmp"/>
+   <item value="430" path="frame15.bmp"/>
+   <item value="431" path="frame16.bmp"/>
+   <item value="432" path="frame17.bmp"/>
+   <item value="433" path="frame18.bmp"/>
+  </folder>
+  <folder path="running jump">
+   <item value="434" path="frame01.bmp"/>
+   <item value="435" path="frame02.bmp"/>
+   <item value="436" path="frame03.bmp"/>
+   <item value="437" path="frame04.bmp"/>
+   <item value="438" path="frame05.bmp"/>
+   <item value="439" path="frame06.bmp"/>
+   <item value="440" path="frame07.bmp"/>
+   <item value="441" path="frame08.bmp"/>
+   <item value="442" path="frame09.bmp"/>
+   <item value="443" path="frame10.bmp"/>
+   <item value="444" path="frame11.bmp"/>
+  </folder>
+  <folder path="turning">
+   <item value="445" path="frame01.bmp"/>
+   <item value="446" path="frame02.bmp"/>
+   <item value="447" path="frame03.bmp"/>
+   <item value="448" path="frame04.bmp"/>
+   <item value="449" path="frame05.bmp"/>
+   <item value="450" path="frame06.bmp"/>
+   <item value="451" path="frame07.bmp"/>
+   <item value="452" path="frame08.bmp"/>
+  </folder>
+  <folder path="stairs">
+   <item value="453" path="frame01.bmp"/>
+   <item value="454" path="frame02.bmp"/>
+   <item value="455" path="frame03.bmp"/>
+   <item value="456" path="frame04.bmp"/>
+   <item value="457" path="frame05.bmp"/>
+   <item value="458" path="frame06.bmp"/>
+   <item value="459" path="frame07.bmp"/>
+   <item value="460" path="frame08.bmp"/>
+   <item value="461" path="frame09.bmp"/>
+   <item value="462" path="frame10.bmp"/>
+   <item value="463" path="frame11.bmp"/>
+   <item value="464" path="frame12.bmp"/>
+  </folder>
+  <folder path="turn running">
+   <item value="465" path="frame01.bmp"/>
+   <item value="466" path="frame02.bmp"/>
+   <item value="467" path="frame03.bmp"/>
+   <item value="468" path="frame04.bmp"/>
+   <item value="469" path="frame05.bmp"/>
+   <item value="470" path="frame06.bmp"/>
+   <item value="471" path="frame07.bmp"/>
+   <item value="472" path="frame08.bmp"/>
+   <item value="473" path="frame09.bmp"/>
+   <item value="474" path="frame10.bmp"/>
+   <item value="475" path="frame11.bmp"/>
+   <item value="476" path="frame12.bmp"/>
+   <item value="477" path="frame13.bmp"/>
+  </folder>
+  <folder path="deaths">
+   <item value="478" path="chopped.bmp"/>
+   <item value="479" path="spiked.bmp"/>
+   <item value="480" path="dead.bmp"/>
+  </folder>
+  <folder path="scaling">
+   <item value="481" path="frame01.bmp"/>
+   <item value="482" path="frame02.bmp"/>
+   <item value="483" path="frame03.bmp"/>
+   <item value="484" path="frame04.bmp"/>
+   <item value="485" path="frame05.bmp"/>
+   <item value="486" path="frame06.bmp"/>
+   <item value="487" path="frame07.bmp"/>
+   <item value="488" path="frame08.bmp"/>
+   <item value="489" path="frame09.bmp"/>
+   <item value="490" path="frame10.bmp"/>
+   <item value="491" path="frame11.bmp"/>
+   <item value="492" path="frame12.bmp"/>
+   <item value="493" path="frame13.bmp"/>
+   <item value="494" path="frame14.bmp"/>
+   <item value="495" path="frame15.bmp"/>
+   <item value="496" path="frame16.bmp"/>
+   <item value="497" path="frame17.bmp"/>
+   <item value="498" path="frame18.bmp"/>
+   <item value="499" path="frame19.bmp"/>
+  </folder>
+  <folder path="hanging and falling">
+   <item value="500" path="frame00.bmp"/>
+   <item value="501" path="frame01.bmp"/>
+   <item value="502" path="frame02.bmp"/>
+   <item value="503" path="frame03.bmp"/>
+   <item value="504" path="frame04.bmp"/>
+   <item value="505" path="frame05.bmp"/>
+   <item value="506" path="frame06.bmp"/>
+   <item value="507" path="frame07.bmp"/>
+   <item value="508" path="frame08.bmp"/>
+   <item value="509" path="frame09.bmp"/>
+   <item value="510" path="frame10.bmp"/>
+   <item value="511" path="frame11.bmp"/>
+   <item value="512" path="frame12.bmp"/>
+   <item value="513" path="frame13.bmp"/>
+   <item value="514" path="frame14.bmp"/>
+   <item value="515" path="frame15.bmp"/>
+   <item value="516" path="frame16.bmp"/>
+   <item value="517" path="frame17.bmp"/>
+  </folder>
+  <folder path="crouching">
+   <item value="518" path="frame01.bmp"/>
+   <item value="519" path="frame02.bmp"/>
+   <item value="520" path="frame03.bmp"/>
+   <item value="521" path="frame04.bmp"/>
+   <item value="522" path="frame05.bmp"/>
+   <item value="523" path="frame06.bmp"/>
+   <item value="524" path="frame07.bmp"/>
+   <item value="525" path="frame08.bmp"/>
+   <item value="526" path="frame09.bmp"/>
+   <item value="527" path="frame10.bmp"/>
+   <item value="528" path="frame11.bmp"/>
+   <item value="529" path="frame12.bmp"/>
+   <item value="530" path="frame13.bmp"/>
+  </folder>
+  <folder path="mouse">
+   <item value="531" path="frame01.bmp"/>
+   <item value="532" path="frame02.bmp"/>
+   <item value="533" path="frame03.bmp"/>
+  </folder>
+  <folder path="walking a step">
+   <item value="534" path="frame01.bmp"/>
+   <item value="535" path="frame02.bmp"/>
+   <item value="536" path="frame03.bmp"/>
+   <item value="537" path="frame04.bmp"/>
+   <item value="538" path="frame05.bmp"/>
+   <item value="539" path="frame06.bmp"/>
+   <item value="540" path="frame07.bmp"/>
+   <item value="541" path="frame08.bmp"/>
+   <item value="542" path="frame09.bmp"/>
+   <item value="543" path="frame10.bmp"/>
+   <item value="544" path="frame11.bmp"/>
+   <item value="545" path="frame12.bmp"/>
+  </folder>
+  <folder path="clipping">
+   <item value="546" path="frame01.bmp"/>
+   <item value="547" path="frame02.bmp"/>
+   <item value="548" path="frame03.bmp"/>
+   <item value="549" path="frame04.bmp"/>
+   <item value="550" path="frame05.bmp"/>
+   <item value="551" path="frame06.bmp"/>
+   <item value="552" path="frame07.bmp"/>
+   <item value="553" path="frame08.bmp"/>
+   <item value="554" path="frame09.bmp"/>
+   <item value="555" path="frame10.bmp"/>
+   <item value="556" path="frame11.bmp"/>
+   <item value="557" path="frame12.bmp"/>
+   <item value="558" path="frame13.bmp"/>
+   <item value="559" path="frame14.bmp"/>
+   <item value="560" path="frame15.bmp"/>
+  </folder>
+  <folder path="got sword">
+   <item value="561" path="frame01.bmp"/>
+   <item value="562" path="frame02.bmp"/>
+   <item value="563" path="frame03.bmp"/>
+   <item value="564" path="frame04.bmp"/>
+   <item value="565" path="frame05.bmp"/>
+   <item value="566" path="frame06.bmp"/>
+   <item value="567" path="frame07.bmp"/>
+   <item value="568" path="frame08.bmp"/>
+  </folder>
+  <folder path="putting down sword">
+   <item value="569" path="frame01.bmp"/>
+   <item value="570" path="frame02.bmp"/>
+   <item value="571" path="frame03.bmp"/>
+   <item value="572" path="frame04.bmp"/>
+   <item value="573" path="frame05.bmp"/>
+   <item value="574" path="frame06.bmp"/>
+  </folder>
+  <folder path="sword attacking">
+   <item value="575" path="frame01.bmp"/>
+   <item value="576" path="frame02.bmp"/>
+   <item value="577" path="frame03.bmp"/>
+   <item value="578" path="frame04.bmp"/>
+   <item value="579" path="frame05.bmp"/>
+   <item value="580" path="frame06.bmp"/>
+   <item value="581" path="frame07.bmp"/>
+   <item value="582" path="frame08.bmp"/>
+   <item value="583" path="frame09.bmp"/>
+   <item value="584" path="frame10.bmp"/>
+   <item value="585" path="frame11.bmp"/>
+   <item value="586" path="frame12.bmp"/>
+   <item value="587" path="frame13.bmp"/>
+   <item value="588" path="frame14.bmp"/>
+   <item value="589" path="frame15.bmp"/>
+   <item value="590" path="frame16.bmp"/>
+   <item value="591" path="frame17.bmp"/>
+   <item value="592" path="frame18.bmp"/>
+  </folder>
+  <folder path="drinking">
+   <item value="593" path="frame01.bmp"/>
+   <item value="594" path="frame02.bmp"/>
+   <item value="595" path="frame03.bmp"/>
+   <item value="596" path="frame04.bmp"/>
+   <item value="597" path="frame05.bmp"/>
+   <item value="598" path="frame06.bmp"/>
+   <item value="599" path="frame07.bmp"/>
+   <item value="600" path="frame08.bmp"/>
+   <item value="601" path="frame09.bmp"/>
+   <item value="602" path="frame10.bmp"/>
+   <item value="603" path="frame11.bmp"/>
+   <item value="604" path="frame12.bmp"/>
+   <item value="605" path="frame13.bmp"/>
+   <item value="606" path="frame14.bmp"/>
+   <item value="607" path="frame15.bmp"/>
+  </folder>
+  <folder path="taking sword out">
+   <item value="608" path="frame01.bmp"/>
+   <item value="609" path="frame02.bmp"/>
+   <item value="610" path="frame03.bmp"/>
+   <item value="611" path="frame04.bmp"/>
+  </folder>
+  <folder path="dieing">
+   <item value="612" path="frame01.bmp"/>
+   <item value="613" path="frame02.bmp"/>
+   <item value="614" path="frame03.bmp"/>
+   <item value="615" path="frame04.bmp"/>
+   <item value="616" path="frame05.bmp"/>
+  </folder>
+  <folder path="objects">
+   <item value="617" path="full live.bmp"/>
+   <item value="618" path="empty live.bmp"/>
+   <item value="619" path="splash.bmp"/>
+  </folder>
+ </folder>
+
+ <folder index="pop1" name="midi sound" file="midisnd1.dat" path="midisnd1" type="midi">
+  <item value="10024" path="death not in fight.mid"/>
+  <item value="10025" path="presentation.mid"/>
+  <item value="10026" path="arrived to princess.mid"/>
+  <item value="10027" path="cutscene 2, 4, 6, 12.mid"/>
+  <item value="10028" path="death in fight.mid"/>
+  <item value="10029" path="meet Jaffar.mid"/>
+  <item value="10030" path="potion big.mid"/>
+  <item value="10032" path="end level with shadow, killed by shadow.mid"/>
+  <item value="10033" path="potion small.mid"/>
+  <item value="10035" path="cutscene 8, 9.mid"/>
+  <item value="10036" path="time over.mid"/>
+  <item value="10037" path="guard death, get sword.mid"/>
+  <item value="10039" path="low weight.mid"/>
+  <item value="10040" path="cutscene 12 short time left.mid"/>
+  <item value="10041" path="story5 Marry Jaffar, end level.mid"/>
+  <item value="10043" path="Jaffar death.mid"/>
+ </folder>
+
+ <folder index="pop1" name="midi sound 2" file="midisnd2.dat" path="midisnd2" type="midi">
+  <item value="10050" path="story2 princess waiting.mid"/>
+  <item value="10052" path="story4 Jaffar leaves.mid"/>
+  <item value="10053" path="story3 Jaffar comes.mid"/>
+  <item value="10054" path="main theme.mid"/>
+  <item value="10055" path="story1 In the absence.mid"/>
+  <item value="10056" path="winning theme.mid"/>
+ </folder>
+
+ <folder index="pop1" name="digital sound" file="digisnd1.dat" path="digisnd1" type="wave">
+  <item value="10000" path="landing hard.wav"/>
+  <item value="10002" path="tile crashing.wav"/>
+  <item value="10003" path="button pressed.wav"/>
+  <item value="10004" path="gate closing.wav"/>
+  <item value="10005" path="gate opening.wav"/>
+  <item value="10006" path="gate closing fast.wav"/>
+  <item value="10007" path="gate stop.wav"/>
+  <item value="10008" path="touching a wall.wav"/>
+  <item value="10009" path="grab.wav"/>
+  <item value="10010" path="sword vs sword.wav"/>
+  <item value="10011" path="sword moving.wav"/>
+  <item value="10012" path="guard hurt.wav"/>
+  <item value="10013" path="kid hurt.wav"/>
+  <item value="10016" path="landing medium.wav"/>
+  <item value="10017" path="landing soft.wav"/>
+  <item value="10019" path="taking out the sword.wav"/>
+  <item value="10020" path="tile moving 1.wav"/>
+  <item value="10021" path="tile moving 2.wav"/>
+  <item value="10022" path="tile moving 3.wav"/>
+  <item value="10023" path="footstep.wav"/>
+ </folder>
+ <folder index="pop1" name="binary" file="digisnd2.dat" path="digisnd2" type="wave">
+  <item value="10044" path="skel alive.wav"/>
+  <item value="10045" path="mirror.wav"/>
+  <item value="10046" path="something chopped.wav"/>
+  <item value="10047" path="chomper.wav"/>
+  <item value="10048" path="something spiked.wav"/>
+  <item value="10049" path="spikes.wav"/>
+  <item value="10051" path="princess door.wav"/>
+ </folder>
+ <folder index="pop1" name="binary" file="digisnd3.dat" path="digisnd3" type="wave">
+  <item value="10001" path="falling.wav"/>
+  <item value="10014" path="level door closing.wav"/>
+  <item value="10015" path="level door opening.wav"/>
+  <item value="10018" path="drinking.wav"/>
+ </folder>
+
+<!-- PoP 1.3 and 1.4 -->
+ <folder index="pop1" name="digital sound" file="mt32snd1.dat" path="mt32snd1" type="midi">
+  <item value="10000" path="landing hard.mid"/>
+  <item value="10001" path="falling.mid"/>
+  <item value="10002" path="tile crashing.mid"/>
+  <item value="10003" path="button pressed.mid"/>
+  <item value="10004" path="gate closing.mid"/>
+  <item value="10005" path="gate opening.mid"/>
+  <item value="10006" path="gate closing fast.mid"/>
+  <item value="10007" path="gate stop.mid"/>
+  <item value="10008" path="touching a wall.mid"/>
+  <item value="10009" path="grab.mid"/>
+  <item value="10010" path="sword vs sword.mid"/>
+  <item value="10011" path="sword moving.mid"/>
+  <item value="10012" path="guard hurt.mid"/>
+  <item value="10013" path="kid hurt.mid"/>
+  <item value="10014" path="level door closing.mid"/>
+  <item value="10015" path="level door opening.mid"/>
+  <item value="10016" path="landing medium.mid"/>
+  <item value="10017" path="landing soft.mid"/>
+  <item value="10018" path="drinking.mid"/>
+  <item value="10019" path="taking out the sword.mid"/>
+  <item value="10020" path="tile moving 1.mid"/>
+  <item value="10021" path="tile moving 2.mid"/>
+  <item value="10022" path="tile moving 3.mid"/>
+  <item value="10023" path="footstep.mid"/>
+ </folder>
+ <folder index="pop1" name="binary" file="mt32snd2.dat" path="mt32snd2" type="midi">
+  <item value="10044" path="skel alive.mid"/>
+  <item value="10045" path="mirror.mid"/>
+  <item value="10046" path="something chopped.mid"/>
+  <item value="10047" path="chomper.mid"/>
+  <item value="10048" path="something spiked.mid"/>
+  <item value="10049" path="spikes.mid"/>
+  <item value="10051" path="princess door.mid"/>
+ </folder>
+
+ <!-- not processed -->
+ <folder index="pop1" name="binary" file="ibm_snd1.dat" path="ibm_snd1" type="pcspeaker">
+  <item value="10000" path="snd00.pcs"/>
+  <item value="10001" path="snd01.bin" type="binary"/>
+  <item value="10002" path="snd02.pcs"/>
+  <item value="10003" path="snd03.pcs"/>
+  <item value="10004" path="snd04.pcs"/>
+  <item value="10005" path="snd05.pcs"/>
+  <item value="10006" path="snd06.pcs"/>
+  <item value="10007" path="snd07.pcs"/>
+  <item value="10008" path="snd08.pcs"/>
+  <item value="10009" path="snd09.pcs"/>
+  <item value="10010" path="snd10.pcs"/>
+  <item value="10011" path="snd11.bin" type="binary"/>
+  <item value="10012" path="snd12.pcs"/>
+  <item value="10013" path="snd13.pcs"/>
+  <item value="10014" path="snd14.pcs"/>
+  <item value="10015" path="snd15.bin" type="binary"/>
+  <item value="10016" path="snd16.pcs"/>
+  <item value="10017" path="snd17.pcs"/>
+  <item value="10018" path="snd18.pcs"/>
+  <item value="10019" path="snd19.bin" type="binary"/>
+  <item value="10020" path="snd20.bin" type="binary"/>
+  <item value="10021" path="snd21.bin" type="binary"/>
+  <item value="10022" path="snd22.bin" type="binary"/>
+  <item value="10023" path="snd23.pcs"/>
+  <item value="10024" path="snd24.pcs"/>
+  <item value="10025" path="snd25.pcs"/>
+  <item value="10026" path="snd26.pcs"/>
+  <item value="10027" path="snd27.pcs"/>
+  <item value="10028" path="snd28.pcs"/>
+  <item value="10029" path="snd29.pcs"/>
+  <item value="10030" path="snd30.pcs"/>
+  <item value="10031" path="snd31.bin" type="binary"/>
+  <item value="10032" path="snd32.pcs"/>
+  <item value="10033" path="snd33.pcs"/>
+  <item value="10034" path="snd34.bin" type="binary"/>
+  <item value="10035" path="snd35.pcs"/>
+  <item value="10036" path="snd36.pcs"/>
+  <item value="10037" path="snd37.pcs"/>
+  <item value="10038" path="snd38.pcs"/>
+  <item value="10039" path="snd39.pcs"/>
+  <item value="10040" path="snd40.pcs"/>
+  <item value="10041" path="snd41.pcs"/>
+  <item value="10042" path="snd42.bin" type="binary"/>
+  <item value="10043" path="snd43.pcs"/>
+ </folder>
+ <folder index="pop1" name="binary" file="ibm_snd2.dat" path="ibm_snd2" type="pcspeaker">
+  <item value="10044" path="snd44.pcs"/>
+  <item value="10045" path="snd45.pcs"/>
+  <item value="10046" path="snd46.pcs"/>
+  <item value="10047" path="snd47.pcs"/>
+  <item value="10048" path="snd48.pcs"/>
+  <item value="10049" path="snd49.pcs"/>
+  <item value="10050" path="snd50.pcs"/>
+  <item value="10051" path="snd51.pcs"/>
+  <item value="10052" path="snd52.pcs"/>
+  <item value="10053" path="snd53.pcs"/>
+  <item value="10054" path="snd54.pcs"/>
+  <item value="10055" path="snd55.pcs"/>
+  <item value="10056" path="snd56.pcs"/>
+ </folder>
+
+ <!-- guards -->
+
+ <folder index="pop1" name="binary" file="skel.dat" path="skel" palette="750" type="image">
+  <item value="750" path="res750.pal" type="palette-pop1-4bits"/>
+  <item value="751" path="hit points.bmp"/>
+  <item value="752" path="splash.bmp"/>
+  <item value="753" path="res753.bmp"/>
+  <item value="754" path="res754.bmp"/>
+  <item value="755" path="res755.bmp"/>
+  <item value="756" path="res756.bmp"/>
+  <item value="757" path="res757.bmp"/>
+  <item value="758" path="res758.bmp"/>
+  <item value="759" path="res759.bmp"/>
+  <item value="760" path="res760.bmp"/>
+  <item value="761" path="res761.bmp"/>
+  <item value="762" path="res762.bmp"/>
+  <item value="763" path="res763.bmp"/>
+  <item value="764" path="res764.bmp"/>
+  <item value="765" path="res765.bmp"/>
+  <item value="766" path="res766.bmp"/>
+  <item value="767" path="res767.bmp"/>
+  <item value="768" path="res768.bmp"/>
+  <item value="769" path="res769.bmp"/>
+  <item value="770" path="res770.bmp"/>
+  <item value="771" path="res771.bmp"/>
+  <item value="772" path="res772.bmp"/>
+  <item value="773" path="res773.bmp"/>
+  <item value="774" path="res774.bmp"/>
+  <item value="775" path="res775.bmp"/>
+  <item value="776" path="res776.bmp"/>
+  <item value="777" path="spiked.bmp"/>
+  <item value="778" path="chopped.bmp"/>
+ </folder>
+
+ <folder index="pop1" name="binary" file="vizier.dat" path="vizier" palette="750" type="image">
+  <item value="750" path="res750.pal" type="palette-pop1-4bits"/>
+  <item value="751" path="hit points.bmp"/>
+  <item value="752" path="splash.bmp"/>
+  <item value="753" path="res753.bmp"/>
+  <item value="754" path="res754.bmp"/>
+  <item value="755" path="res755.bmp"/>
+  <item value="756" path="res756.bmp"/>
+  <item value="757" path="res757.bmp"/>
+  <item value="758" path="res758.bmp"/>
+  <item value="759" path="res759.bmp"/>
+  <item value="760" path="res760.bmp"/>
+  <item value="761" path="res761.bmp"/>
+  <item value="762" path="res762.bmp"/>
+  <item value="763" path="res763.bmp"/>
+  <item value="764" path="res764.bmp"/>
+  <item value="765" path="res765.bmp"/>
+  <item value="766" path="res766.bmp"/>
+  <item value="767" path="res767.bmp"/>
+  <item value="768" path="res768.bmp"/>
+  <item value="769" path="res769.bmp"/>
+  <item value="770" path="res770.bmp"/>
+  <item value="771" path="res771.bmp"/>
+  <item value="772" path="res772.bmp"/>
+  <item value="773" path="res773.bmp"/>
+  <item value="774" path="res774.bmp"/>
+  <item value="775" path="res775.bmp"/>
+  <item value="776" path="res776.bmp"/>
+  <item value="777" path="spiked.bmp"/>
+  <item value="778" path="chopped.bmp"/>
+  <item value="779" path="res779.bmp"/>
+  <item value="780" path="res780.bmp"/>
+  <item value="781" path="res781.bmp"/>
+  <item value="782" path="res782.bmp"/>
+  <item value="783" path="res783.bmp"/>
+  <item value="784" path="res784.bmp"/>
+ </folder>
+
+ <folder index="pop1" name="binary" file="shadow.dat" path="shadow" palette="750" type="image">
+  <item value="750" path="res750.pal" type="palette-pop1-4bits"/>
+  <item value="751" path="hit points.bmp"/>
+  <item value="752" path="splash.bmp"/>
+  <item value="753" path="res753.bmp"/>
+  <item value="754" path="res754.bmp"/>
+  <item value="755" path="res755.bmp"/>
+  <item value="756" path="res756.bmp"/>
+  <item value="757" path="res757.bmp"/>
+  <item value="758" path="res758.bmp"/>
+  <item value="759" path="res759.bmp"/>
+  <item value="760" path="res760.bmp"/>
+  <item value="761" path="res761.bmp"/>
+  <item value="762" path="res762.bmp"/>
+  <item value="763" path="res763.bmp"/>
+  <item value="764" path="res764.bmp"/>
+  <item value="765" path="res765.bmp"/>
+  <item value="766" path="res766.bmp"/>
+  <item value="767" path="res767.bmp"/>
+  <item value="768" path="res768.bmp"/>
+  <item value="769" path="res769.bmp"/>
+  <item value="770" path="res770.bmp"/>
+  <item value="771" path="res771.bmp"/>
+  <item value="772" path="res772.bmp"/>
+  <item value="773" path="res773.bmp"/>
+  <item value="774" path="res774.bmp"/>
+  <item value="775" path="res775.bmp"/>
+  <item value="776" path="res776.bmp"/>
+  <item value="777" path="spiked.bmp"/>
+  <item value="778" path="chopped.bmp"/>
+  <item value="779" path="res779.bmp"/>
+  <item value="780" path="res780.bmp"/>
+  <item value="781" path="res781.bmp"/>
+  <item value="782" path="res782.bmp"/>
+ </folder>
+
+ <folder index="pop1" name="binary" file="fat.dat" path="fat" palette="750" type="image">
+  <item value="750" path="res750.pal" type="palette-pop1-4bits"/>
+  <item value="751" path="hit points.bmp"/>
+  <item value="752" path="splash.bmp"/>
+  <item value="753" path="res753.bmp"/>
+  <item value="754" path="res754.bmp"/>
+  <item value="755" path="res755.bmp"/>
+  <item value="756" path="res756.bmp"/>
+  <item value="757" path="res757.bmp"/>
+  <item value="758" path="res758.bmp"/>
+  <item value="759" path="res759.bmp"/>
+  <item value="760" path="res760.bmp"/>
+  <item value="761" path="res761.bmp"/>
+  <item value="762" path="res762.bmp"/>
+  <item value="763" path="res763.bmp"/>
+  <item value="764" path="res764.bmp"/>
+  <item value="765" path="res765.bmp"/>
+  <item value="766" path="res766.bmp"/>
+  <item value="767" path="res767.bmp"/>
+  <item value="768" path="res768.bmp"/>
+  <item value="769" path="res769.bmp"/>
+  <item value="770" path="res770.bmp"/>
+  <item value="771" path="res771.bmp"/>
+  <item value="772" path="res772.bmp"/>
+  <item value="773" path="res773.bmp"/>
+  <item value="774" path="res774.bmp"/>
+  <item value="775" path="res775.bmp"/>
+  <item value="776" path="res776.bmp"/>
+  <item value="777" path="spiked.bmp"/>
+  <item value="778" path="chopped.bmp"/>
+  <item value="779" path="res779.bmp"/>
+  <item value="780" path="res780.bmp"/>
+  <item value="781" path="res781.bmp"/>
+  <item value="782" path="res782.bmp"/>
+  <item value="783" path="res783.bmp"/>
+  <item value="784" path="res784.bmp"/>
+ </folder>
+ <folder index="pop1" name="binary" file="guard.dat" path="guards" palette="0" type="image">
+  <item value="751" path="hit points.bmp"/>
+  <item value="752" path="splash.bmp"/>
+  <item value="753" path="res753.bmp"/>
+  <item value="754" path="res754.bmp"/>
+  <item value="755" path="res755.bmp"/>
+  <item value="756" path="res756.bmp"/>
+  <item value="757" path="res757.bmp"/>
+  <item value="758" path="res758.bmp"/>
+  <item value="759" path="res759.bmp"/>
+  <item value="760" path="res760.bmp"/>
+  <item value="761" path="res761.bmp"/>
+  <item value="762" path="res762.bmp"/>
+  <item value="763" path="res763.bmp"/>
+  <item value="764" path="res764.bmp"/>
+  <item value="765" path="res765.bmp"/>
+  <item value="766" path="res766.bmp"/>
+  <item value="767" path="res767.bmp"/>
+  <item value="768" path="res768.bmp"/>
+  <item value="769" path="res769.bmp"/>
+  <item value="770" path="res770.bmp"/>
+  <item value="771" path="res771.bmp"/>
+  <item value="772" path="res772.bmp"/>
+  <item value="773" path="res773.bmp"/>
+  <item value="774" path="res774.bmp"/>
+  <item value="775" path="res775.bmp"/>
+  <item value="776" path="res776.bmp"/>
+  <item value="777" path="spiked.bmp"/>
+  <item value="778" path="chopped.bmp"/>
+  <item value="779" path="res779.bmp"/>
+  <item value="780" path="res780.bmp"/>
+  <item value="781" path="res781.bmp"/>
+  <item value="782" path="res782.bmp"/>
+  <item value="783" path="res783.bmp"/>
+  <item value="784" path="res784.bmp"/>
+ </folder>
+ <folder index="pop1" name="binary" file="guard1.dat" path="guards" palette="750">
+  <item value="750" path="palette1.pal" type="palette-pop1-4bits"/>
+ </folder>
+ <folder index="pop1" name="binary" file="guard2.dat" path="guards" palette="750">
+  <item value="750" path="palette2.pal" type="palette-pop1-4bits"/>
+ </folder>
+
+ <folder index="pop1" name="binary" file="levels.dat" type="level" path="levels">
+  <item value="2000" number="0" path="demo.plv"/>
+  <item value="2001" number="1" path="level1.plv"/>
+  <item value="2002" number="2" path="level2.plv"/>
+  <item value="2003" number="3" path="level3.plv"/>
+  <item value="2004" number="4" path="level4.plv"/>
+  <item value="2005" number="5" path="level5.plv"/>
+  <item value="2006" number="6" path="level6.plv"/>
+  <item value="2007" number="7" path="level7.plv"/>
+  <item value="2008" number="8" path="level8.plv"/>
+  <item value="2009" number="9" path="level9.plv"/>
+  <item value="2010" number="10" path="level10.plv"/>
+  <item value="2011" number="11" path="level11.plv"/>
+  <item value="2012" number="12" path="level12a.plv"/>
+  <item value="2013" number="13" path="level12b.plv"/>
+  <item value="2014" number="14" path="princess.plv"/>
+  <item value="2015" number="15" path="potions.plv"/>
+ </folder>
+
+<!-- CGA and EGA by David -->
+
+	<folder path="CDUNGEON" file="CDUNGEON.DAT" palette="0" paletteindex="" index="pop1">
+		<item path="res00200.bin" type="binary" value="200"/>
+		<item path="res00201.bin" type="binary" value="201"/>
+		<item path="res00202.bin" type="binary" value="202"/>
+		<item path="res00203.bin" type="binary" value="203"/>
+		<item path="res00204.bin" type="binary" value="204"/>
+		<item path="res00205.bin" type="binary" value="205"/>
+		<item path="res00206.bin" type="binary" value="206"/>
+		<item path="res00207.bin" type="binary" value="207"/>
+		<item path="res00208.bin" type="binary" value="208"/>
+		<item path="res00209.bin" type="binary" value="209"/>
+		<item path="res00210.bin" type="binary" value="210"/>
+		<item path="res00211.bin" type="binary" value="211"/>
+		<item path="res00212.bin" type="binary" value="212"/>
+		<item path="res00213.bin" type="binary" value="213"/>
+		<item path="res00214.bin" type="binary" value="214"/>
+		<item path="res00215.bin" type="binary" value="215"/>
+		<item path="res00216.bin" type="binary" value="216"/>
+		<item path="res00217.bin" type="binary" value="217"/>
+		<item path="res00218.bin" type="binary" value="218"/>
+		<item path="res00219.bin" type="binary" value="219"/>
+		<item path="res00220.bin" type="binary" value="220"/>
+		<item path="res00221.bin" type="binary" value="221"/>
+		<item path="res00222.bin" type="binary" value="222"/>
+		<item path="res00223.bin" type="binary" value="223"/>
+		<item path="res00224.bin" type="binary" value="224"/>
+		<item path="res00225.bin" type="binary" value="225"/>
+		<item path="res00226.bin" type="binary" value="226"/>
+		<item path="res00227.bin" type="binary" value="227"/>
+		<item path="res00228.bin" type="binary" value="228"/>
+		<item path="res00229.bin" type="binary" value="229"/>
+		<item path="res00230.bin" type="binary" value="230"/>
+		<item path="res00231.bin" type="binary" value="231"/>
+		<item path="res00232.bmp" type="image" value="232"/>
+		<item path="res00233.bmp" type="image" value="233"/>
+		<item path="res00234.bmp" type="image" value="234"/>
+		<item path="res00235.bmp" type="image" value="235"/>
+		<item path="res00236.bmp" type="image" value="236"/>
+		<item path="res00237.bmp" type="image" value="237"/>
+		<item path="res00238.bmp" type="image" value="238"/>
+		<item path="res00239.bmp" type="image" value="239"/>
+		<item path="res00240.bmp" type="image" value="240"/>
+		<item path="res00241.bmp" type="image" value="241"/>
+		<item path="res00242.bmp" type="image" value="242"/>
+		<item path="res00243.bmp" type="image" value="243"/>
+		<item path="res00244.bmp" type="image" value="244"/>
+		<item path="res00245.bmp" type="image" value="245"/>
+		<item path="res00246.bmp" type="image" value="246"/>
+		<item path="res00247.bmp" type="image" value="247"/>
+		<item path="res00248.bmp" type="image" value="248"/>
+		<item path="res00249.bmp" type="image" value="249"/>
+		<item path="res00250.bmp" type="image" value="250"/>
+		<item path="res00251.bmp" type="image" value="251"/>
+		<item path="res00252.bmp" type="image" value="252"/>
+		<item path="res00253.bmp" type="image" value="253"/>
+		<item path="res00254.bmp" type="image" value="254"/>
+		<item path="res00255.bmp" type="image" value="255"/>
+		<item path="res00256.bmp" type="image" value="256"/>
+		<item path="res00257.bmp" type="image" value="257"/>
+		<item path="res00258.bmp" type="image" value="258"/>
+		<item path="res00259.bmp" type="image" value="259"/>
+		<item path="res00260.bmp" type="image" value="260"/>
+		<item path="res00261.bmp" type="image" value="261"/>
+		<item path="res00262.bmp" type="image" value="262"/>
+		<item path="res00263.bmp" type="image" value="263"/>
+		<item path="res00264.bmp" type="image" value="264"/>
+		<item path="res00265.bmp" type="image" value="265"/>
+		<item path="res00266.bmp" type="image" value="266"/>
+		<item path="res00267.bmp" type="image" value="267"/>
+		<item path="res00268.bmp" type="image" value="268" colors="2"/>
+		<item path="res00269.bmp" type="image" value="269"/>
+		<item path="res00270.bmp" type="image" value="270"/>
+		<item path="res00271.bmp" type="image" value="271"/>
+		<item path="res00272.bmp" type="image" value="272"/>
+		<item path="res00273.bmp" type="image" value="273"/>
+		<item path="res00274.bmp" type="image" value="274"/>
+		<item path="res00275.bin" type="binary" value="275"/>
+		<item path="res00276.bin" type="binary" value="276"/>
+		<item path="res00277.bin" type="binary" value="277"/>
+		<item path="res00278.bin" type="binary" value="278"/>
+		<item path="res00279.bin" type="binary" value="279"/>
+		<item path="res00280.bin" type="binary" value="280"/>
+		<item path="res00281.bin" type="binary" value="281"/>
+		<item path="res00282.bin" type="binary" value="282"/>
+		<item path="res00283.bin" type="binary" value="283"/>
+		<item path="res00284.bin" type="binary" value="284"/>
+		<item path="res00285.bmp" type="image" value="285"/>
+		<item path="res00286.bin" type="binary" value="286"/>
+		<item path="res00287.bin" type="binary" value="287"/>
+		<item path="res00288.bin" type="binary" value="288"/>
+		<item path="res00289.bin" type="binary" value="289"/>
+		<item path="res00290.bin" type="binary" value="290"/>
+		<item path="res00291.bin" type="binary" value="291"/>
+		<item path="res00292.bmp" type="image" value="292"/>
+		<item path="res00293.bmp" type="image" value="293"/>
+		<item path="res00294.bmp" type="image" value="294"/>
+		<item path="res00295.bmp" type="image" value="295"/>
+		<item path="res00296.bmp" type="image" value="296"/>
+		<item path="res00297.bmp" type="image" value="297"/>
+		<item path="res00298.bmp" type="image" value="298"/>
+		<item path="res00299.bmp" type="image" value="299"/>
+		<item path="res00300.bmp" type="image" value="300"/>
+		<item path="res00301.bin" type="binary" value="301"/>
+		<item path="res00302.bin" type="binary" value="302"/>
+		<item path="res00303.bin" type="binary" value="303"/>
+		<item path="res00304.bin" type="binary" value="304"/>
+		<item path="res00305.bin" type="binary" value="305"/>
+		<item path="res00306.bin" type="binary" value="306"/>
+		<item path="res00307.bin" type="binary" value="307"/>
+		<item path="res00308.bin" type="binary" value="308"/>
+		<item path="res00309.bin" type="binary" value="309"/>
+		<item path="res00310.bin" type="binary" value="310"/>
+		<item path="res00311.bin" type="binary" value="311"/>
+		<item path="res00312.bin" type="binary" value="312"/>
+		<item path="res00313.bin" type="binary" value="313"/>
+		<item path="res00314.bin" type="binary" value="314"/>
+		<item path="res00315.bin" type="binary" value="315"/>
+		<item path="res00316.bin" type="binary" value="316"/>
+		<item path="res00317.bin" type="binary" value="317"/>
+		<item path="res00318.bin" type="binary" value="318"/>
+		<item path="res00319.bin" type="binary" value="319"/>
+		<item path="res00320.bin" type="binary" value="320"/>
+		<item path="res00321.bin" type="binary" value="321"/>
+		<item path="res00322.bin" type="binary" value="322"/>
+		<item path="res00323.bin" type="binary" value="323"/>
+		<item path="res00324.bmp" type="image" value="324"/>
+		<item path="res00325.bmp" type="image" value="325"/>
+		<item path="res00326.bmp" type="image" value="326"/>
+		<item path="res00327.bin" type="binary" value="327"/>
+		<item path="res00328.bin" type="binary" value="328"/>
+		<item path="res00329.bin" type="binary" value="329"/>
+		<item path="res00330.bin" type="binary" value="330"/>
+		<item path="res00331.bin" type="binary" value="331"/>
+		<item path="res00332.bin" type="binary" value="332"/>
+		<item path="res00333.bin" type="binary" value="333"/>
+		<item path="res00334.bin" type="binary" value="334"/>
+		<item path="res00335.bin" type="binary" value="335"/>
+		<item path="res00336.bin" type="binary" value="336"/>
+		<item path="res00337.bin" type="binary" value="337"/>
+		<item path="res00338.bin" type="binary" value="338"/>
+		<item path="res00339.bin" type="binary" value="339"/>
+		<item path="res00340.bin" type="binary" value="340"/>
+		<item path="res00341.bin" type="binary" value="341"/>
+		<item path="res00342.bin" type="binary" value="342"/>
+		<item path="res00343.bin" type="binary" value="343"/>
+		<item path="res00344.bmp" type="image" value="344"/>
+		<item path="res00345.bin" type="binary" value="345"/>
+		<item path="res00346.bmp" type="image" value="346"/>
+		<item path="res00347.bmp" type="image" value="347"/>
+		<item path="res00348.bmp" type="image" value="348"/>
+		<item path="res00349.bmp" type="image" value="349"/>
+		<item path="res00350.bmp" type="image" value="350"/>
+		<item path="res00351.bmp" type="image" value="351"/>
+		<item path="res00360.bin" type="binary" value="360"/>
+		<item path="res00361.bmp" type="image" value="361"/>
+		<item path="res00362.bmp" type="image" value="362"/>
+		<item path="res00363.bmp" type="image" value="363"/>
+		<item path="res00364.bmp" type="image" value="364"/>
+		<item path="res01230.bmp" type="image" value="1230"/>
+		<item path="res01231.bmp" type="image" value="1231"/>
+		<item path="res01286.bmp" type="image" value="1286"/>
+		<item path="res01287.bmp" type="image" value="1287"/>
+		<item path="res01288.bmp" type="image" value="1288"/>
+		<item path="res01289.bmp" type="image" value="1289"/>
+		<item path="res01290.bmp" type="image" value="1290"/>
+		<item path="res01291.bmp" type="image" value="1291"/>
+		<item path="res01301.bmp" type="image" value="1301"/>
+		<item path="res01302.bmp" type="image" value="1302"/>
+		<item path="res01303.bmp" type="image" value="1303"/>
+		<item path="res01304.bmp" type="image" value="1304"/>
+		<item path="res01305.bmp" type="image" value="1305"/>
+		<item path="res01306.bmp" type="image" value="1306"/>
+		<item path="res01307.bmp" type="image" value="1307"/>
+		<item path="res01308.bmp" type="image" value="1308"/>
+		<item path="res01309.bmp" type="image" value="1309"/>
+		<item path="res01310.bmp" type="image" value="1310"/>
+		<item path="res01311.bmp" type="image" value="1311"/>
+		<item path="res01312.bmp" type="image" value="1312"/>
+		<item path="res01313.bmp" type="image" value="1313"/>
+   <folder colors="2">
+		<item path="res01314.bmp" type="image" value="1314"/>
+		<item path="res01315.bmp" type="image" value="1315"/>
+		<item path="res01316.bmp" type="image" value="1316"/>
+		<item path="res01317.bmp" type="image" value="1317"/>
+		<item path="res01318.bmp" type="image" value="1318"/>
+		<item path="res01319.bmp" type="image" value="1319"/>
+		<item path="res01320.bmp" type="image" value="1320"/>
+		<item path="res01321.bmp" type="image" value="1321"/>
+		<item path="res01322.bmp" type="image" value="1322"/>
+		<item path="res01323.bmp" type="image" value="1323"/>
+   </folder>
+		<item path="res01327.bmp" type="image" value="1327"/>
+		<item path="res01328.bmp" type="image" value="1328"/>
+		<item path="res01329.bmp" type="image" value="1329"/>
+		<item path="res01330.bmp" type="image" value="1330"/>
+		<item path="res01331.bmp" type="image" value="1331"/>
+		<item path="res01332.bmp" type="image" value="1332"/>
+		<item path="res01333.bmp" type="image" value="1333"/>
+		<item path="res01334.bmp" type="image" value="1334"/>
+		<item path="res01335.bmp" type="image" value="1335"/>
+		<item path="res01336.bmp" type="image" value="1336"/>
+		<item path="res01337.bmp" type="image" value="1337"/>
+		<item path="res01338.bmp" type="image" value="1338"/>
+		<item path="res01339.bmp" type="image" value="1339"/>
+		<item path="res01340.bmp" type="image" value="1340"/>
+		<item path="res01341.bmp" type="image" value="1341"/>
+		<item path="res01342.bmp" type="image" value="1342"/>
+		<item path="res01343.bmp" type="image" value="1343"/>
+	</folder>
+
+	<folder path="CPALACE" file="CPALACE.DAT" palette="0" paletteindex="" index="pop1">
+		<item path="res00200.bin" type="binary" value="200"/>
+		<item path="res00201.bin" type="binary" value="201"/>
+		<item path="res00202.bin" type="binary" value="202"/>
+		<item path="res00203.bin" type="binary" value="203"/>
+		<item path="res00204.bin" type="binary" value="204"/>
+		<item path="res00205.bin" type="binary" value="205"/>
+		<item path="res00206.bin" type="binary" value="206"/>
+		<item path="res00207.bin" type="binary" value="207"/>
+		<item path="res00208.bin" type="binary" value="208"/>
+		<item path="res00209.bin" type="binary" value="209"/>
+		<item path="res00210.bin" type="binary" value="210"/>
+		<item path="res00211.bin" type="binary" value="211"/>
+		<item path="res00212.bin" type="binary" value="212"/>
+		<item path="res00213.bin" type="binary" value="213"/>
+		<item path="res00214.bin" type="binary" value="214"/>
+		<item path="res00215.bin" type="binary" value="215"/>
+		<item path="res00216.bin" type="binary" value="216"/>
+		<item path="res00217.bin" type="binary" value="217"/>
+		<item path="res00218.bin" type="binary" value="218"/>
+		<item path="res00219.bin" type="binary" value="219"/>
+		<item path="res00220.bin" type="binary" value="220"/>
+		<item path="res00221.bin" type="binary" value="221"/>
+		<item path="res00222.bin" type="binary" value="222"/>
+		<item path="res00223.bin" type="binary" value="223"/>
+		<item path="res00224.bin" type="binary" value="224"/>
+		<item path="res00225.bin" type="binary" value="225"/>
+		<item path="res00226.bin" type="binary" value="226"/>
+		<item path="res00227.bin" type="binary" value="227"/>
+		<item path="res00228.bin" type="binary" value="228"/>
+		<item path="res00229.bin" type="binary" value="229"/>
+		<item path="res00230.bin" type="binary" value="230"/>
+		<item path="res00231.bin" type="binary" value="231"/>
+		<item path="res00232.bmp" type="image" value="232"/>
+		<item path="res00233.bmp" type="image" value="233"/>
+		<item path="res00234.bmp" type="image" value="234"/>
+		<item path="res00235.bmp" type="image" value="235"/>
+		<item path="res00236.bmp" type="image" value="236"/>
+		<item path="res00237.bmp" type="image" value="237"/>
+		<item path="res00238.bmp" type="image" value="238"/>
+		<item path="res00239.bmp" type="image" value="239"/>
+		<item path="res00240.bmp" type="image" value="240"/>
+		<item path="res00241.bmp" type="image" value="241"/>
+		<item path="res00242.bmp" type="image" value="242"/>
+		<item path="res00243.bmp" type="image" value="243"/>
+		<item path="res00244.bmp" type="image" value="244"/>
+		<item path="res00245.bmp" type="image" value="245"/>
+		<item path="res00246.bmp" type="image" value="246"/>
+		<item path="res00247.bmp" type="image" value="247"/>
+		<item path="res00248.bmp" type="image" value="248"/>
+		<item path="res00249.bmp" type="image" value="249"/>
+		<item path="res00250.bmp" type="image" value="250"/>
+		<item path="res00251.bmp" type="image" value="251"/>
+		<item path="res00252.bmp" type="image" value="252"/>
+		<item path="res00253.bmp" type="image" value="253"/>
+		<item path="res00254.bmp" type="image" value="254"/>
+		<item path="res00255.bmp" type="image" value="255"/>
+		<item path="res00256.bmp" type="image" value="256"/>
+		<item path="res00257.bmp" type="image" value="257"/>
+		<item path="res00258.bmp" type="image" value="258"/>
+		<item path="res00259.bmp" type="image" value="259"/>
+		<item path="res00260.bmp" type="image" value="260"/>
+		<item path="res00261.bmp" type="image" value="261"/>
+		<item path="res00262.bmp" type="image" value="262"/>
+		<item path="res00263.bmp" type="image" value="263"/>
+		<item path="res00264.bmp" type="image" value="264"/>
+		<item path="res00265.bmp" type="image" value="265"/>
+		<item path="res00266.bmp" type="image" value="266"/>
+		<item path="res00267.bmp" type="image" value="267"/>
+		<item path="res00268.bmp" type="image" value="268" colors="2"/>
+		<item path="res00269.bmp" type="image" value="269"/>
+		<item path="res00270.bmp" type="image" value="270"/>
+		<item path="res00271.bmp" type="image" value="271"/>
+		<item path="res00272.bmp" type="image" value="272"/>
+		<item path="res00273.bmp" type="image" value="273"/>
+		<item path="res00274.bmp" type="image" value="274"/>
+		<item path="res00275.bin" type="binary" value="275"/>
+		<item path="res00276.bin" type="binary" value="276"/>
+		<item path="res00277.bin" type="binary" value="277"/>
+		<item path="res00278.bin" type="binary" value="278"/>
+		<item path="res00279.bin" type="binary" value="279"/>
+		<item path="res00280.bin" type="binary" value="280"/>
+		<item path="res00281.bin" type="binary" value="281"/>
+		<item path="res00282.bin" type="binary" value="282"/>
+		<item path="res00283.bin" type="binary" value="283"/>
+		<item path="res00284.bmp" type="image" value="284"/>
+		<item path="res00285.bmp" type="image" value="285"/>
+		<item path="res00286.bin" type="binary" value="286"/>
+		<item path="res00287.bin" type="binary" value="287"/>
+		<item path="res00288.bin" type="binary" value="288"/>
+		<item path="res00289.bin" type="binary" value="289"/>
+		<item path="res00290.bin" type="binary" value="290"/>
+		<item path="res00291.bin" type="binary" value="291"/>
+		<item path="res00292.bmp" type="image" value="292"/>
+		<item path="res00293.bmp" type="image" value="293"/>
+		<item path="res00294.bmp" type="image" value="294"/>
+		<item path="res00295.bmp" type="image" value="295"/>
+		<item path="res00296.bmp" type="image" value="296"/>
+		<item path="res00297.bmp" type="image" value="297"/>
+		<item path="res00298.bmp" type="image" value="298"/>
+		<item path="res00299.bmp" type="image" value="299"/>
+		<item path="res00300.bmp" type="image" value="300"/>
+		<item path="res00301.bin" type="binary" value="301"/>
+		<item path="res00302.bin" type="binary" value="302"/>
+		<item path="res00303.bin" type="binary" value="303"/>
+		<item path="res00304.bin" type="binary" value="304"/>
+		<item path="res00305.bin" type="binary" value="305"/>
+		<item path="res00306.bin" type="binary" value="306"/>
+		<item path="res00307.bin" type="binary" value="307"/>
+		<item path="res00308.bin" type="binary" value="308"/>
+		<item path="res00309.bin" type="binary" value="309"/>
+		<item path="res00310.bin" type="binary" value="310"/>
+		<item path="res00311.bin" type="binary" value="311"/>
+		<item path="res00312.bin" type="binary" value="312"/>
+		<item path="res00313.bin" type="binary" value="313"/>
+		<item path="res00314.bin" type="binary" value="314"/>
+		<item path="res00315.bin" type="binary" value="315"/>
+		<item path="res00316.bin" type="binary" value="316"/>
+		<item path="res00317.bin" type="binary" value="317"/>
+		<item path="res00318.bin" type="binary" value="318"/>
+		<item path="res00319.bin" type="binary" value="319"/>
+		<item path="res00320.bin" type="binary" value="320"/>
+		<item path="res00321.bin" type="binary" value="321"/>
+		<item path="res00322.bin" type="binary" value="322"/>
+		<item path="res00323.bin" type="binary" value="323"/>
+		<item path="res00324.bmp" type="image" value="324"/>
+		<item path="res00325.bmp" type="image" value="325"/>
+		<item path="res00326.bmp" type="image" value="326"/>
+		<item path="res00327.bin" type="binary" value="327"/>
+		<item path="res00328.bin" type="binary" value="328"/>
+		<item path="res00329.bin" type="binary" value="329"/>
+		<item path="res00330.bin" type="binary" value="330"/>
+		<item path="res00331.bin" type="binary" value="331"/>
+		<item path="res00332.bin" type="binary" value="332"/>
+		<item path="res00333.bin" type="binary" value="333"/>
+		<item path="res00334.bin" type="binary" value="334"/>
+		<item path="res00335.bin" type="binary" value="335"/>
+		<item path="res00336.bin" type="binary" value="336"/>
+		<item path="res00337.bin" type="binary" value="337"/>
+		<item path="res00338.bin" type="binary" value="338"/>
+		<item path="res00339.bin" type="binary" value="339"/>
+		<item path="res00340.bin" type="binary" value="340"/>
+		<item path="res00341.bin" type="binary" value="341"/>
+		<item path="res00342.bin" type="binary" value="342"/>
+		<item path="res00343.bin" type="binary" value="343"/>
+		<item path="res00344.bmp" type="image" value="344"/>
+		<item path="res00345.bmp" type="image" value="345"/>
+		<item path="res00346.bmp" type="image" value="346"/>
+		<item path="res00347.bmp" type="image" value="347"/>
+		<item path="res00348.bin" type="binary" value="348"/>
+		<item path="res00349.bmp" type="image" value="349"/>
+		<item path="res00350.bmp" type="image" value="350"/>
+		<item path="res00351.bmp" type="image" value="351"/>
+		<item path="res00360.bin" type="binary" value="360"/>
+		<item path="res00361.bmp" type="image" value="361"/>
+		<item path="res00362.bmp" type="image" value="362"/>
+		<item path="res00363.bmp" type="image" value="363"/>
+		<item path="res00364.bmp" type="image" value="364"/>
+		<item path="res01201.bmp" type="image" value="1201"/>
+		<item path="res01202.bmp" type="image" value="1202"/>
+		<item path="res01203.bmp" type="image" value="1203"/>
+		<item path="res01204.bmp" type="image" value="1204"/>
+		<item path="res01205.bmp" type="image" value="1205"/>
+		<item path="res01206.bmp" type="image" value="1206"/>
+		<item path="res01207.bin" type="binary" value="1207"/>
+		<item path="res01208.bin" type="binary" value="1208"/>
+		<item path="res01209.bmp" type="image" value="1209"/>
+		<item path="res01210.bmp" type="image" value="1210"/>
+		<item path="res01211.bmp" type="image" value="1211"/>
+		<item path="res01212.bmp" type="image" value="1212"/>
+		<item path="res01213.bmp" type="image" value="1213"/>
+		<item path="res01275.bmp" type="image" value="1275"/>
+		<item path="res01276.bin" type="binary" value="1276"/>
+		<item path="res01277.bmp" type="image" value="1277"/>
+		<item path="res01278.bmp" type="image" value="1278"/>
+		<item path="res01279.bin" type="binary" value="1279"/>
+		<item path="res01280.bmp" type="image" value="1280"/>
+		<item path="res01281.bmp" type="image" value="1281"/>
+		<item path="res01282.bmp" type="image" value="1282"/>
+		<item path="res01283.bmp" type="image" value="1283"/>
+		<item path="res01286.bmp" type="image" value="1286"/>
+		<item path="res01287.bmp" type="image" value="1287"/>
+		<item path="res01288.bmp" type="image" value="1288"/>
+		<item path="res01289.bmp" type="image" value="1289"/>
+		<item path="res01290.bmp" type="image" value="1290"/>
+		<item path="res01291.bmp" type="image" value="1291"/>
+		<item path="res01301.bmp" type="image" value="1301"/>
+		<item path="res01302.bmp" type="image" value="1302"/>
+		<item path="res01303.bmp" type="image" value="1303"/>
+		<item path="res01304.bmp" type="image" value="1304"/>
+		<item path="res01305.bmp" type="image" value="1305"/>
+		<item path="res01306.bmp" type="image" value="1306"/>
+		<item path="res01307.bmp" type="image" value="1307"/>
+		<item path="res01308.bmp" type="image" value="1308"/>
+		<item path="res01309.bmp" type="image" value="1309"/>
+		<item path="res01310.bmp" type="image" value="1310"/>
+		<item path="res01311.bmp" type="image" value="1311"/>
+		<item path="res01312.bmp" type="image" value="1312"/>
+		<item path="res01313.bmp" type="image" value="1313"/>
+   <folder colors="2">
+		<item path="res01314.bmp" type="image" value="1314"/>
+		<item path="res01315.bmp" type="image" value="1315"/>
+		<item path="res01316.bmp" type="image" value="1316"/>
+		<item path="res01317.bmp" type="image" value="1317"/>
+		<item path="res01318.bmp" type="image" value="1318"/>
+		<item path="res01319.bmp" type="image" value="1319"/>
+		<item path="res01320.bmp" type="image" value="1320"/>
+		<item path="res01321.bmp" type="image" value="1321"/>
+		<item path="res01322.bmp" type="image" value="1322"/>
+		<item path="res01323.bmp" type="image" value="1323"/>
+   </folder>
+		<item path="res01327.bmp" type="image" value="1327"/>
+		<item path="res01328.bmp" type="image" value="1328"/>
+		<item path="res01329.bmp" type="image" value="1329"/>
+		<item path="res01330.bmp" type="image" value="1330"/>
+		<item path="res01331.bmp" type="image" value="1331"/>
+		<item path="res01332.bmp" type="image" value="1332"/>
+		<item path="res01333.bmp" type="image" value="1333"/>
+		<item path="res01334.bmp" type="image" value="1334"/>
+		<item path="res01335.bmp" type="image" value="1335"/>
+		<item path="res01336.bmp" type="image" value="1336"/>
+		<item path="res01337.bmp" type="image" value="1337"/>
+		<item path="res01338.bmp" type="image" value="1338"/>
+		<item path="res01339.bmp" type="image" value="1339"/>
+		<item path="res01340.bmp" type="image" value="1340"/>
+		<item path="res01341.bmp" type="image" value="1341"/>
+		<item path="res01342.bmp" type="image" value="1342"/>
+		<item path="res01343.bmp" type="image" value="1343"/>
+	</folder>
+
+	<folder path="EDUNGEON" file="EDUNGEON.DAT" palette="0" paletteindex="" index="pop1">
+		<item path="res00200.bin" type="binary" value="200"/>
+		<item path="res00201.bin" type="binary" value="201"/>
+		<item path="res00202.bin" type="binary" value="202"/>
+		<item path="res00203.bin" type="binary" value="203"/>
+		<item path="res00204.bin" type="binary" value="204"/>
+		<item path="res00205.bin" type="binary" value="205"/>
+		<item path="res00206.bin" type="binary" value="206"/>
+		<item path="res00207.bin" type="binary" value="207"/>
+		<item path="res00208.bin" type="binary" value="208"/>
+		<item path="res00209.bin" type="binary" value="209"/>
+		<item path="res00210.bin" type="binary" value="210"/>
+		<item path="res00211.bin" type="binary" value="211"/>
+		<item path="res00212.bin" type="binary" value="212"/>
+		<item path="res00213.bin" type="binary" value="213"/>
+		<item path="res00214.bin" type="binary" value="214"/>
+		<item path="res00215.bin" type="binary" value="215"/>
+		<item path="res00216.bin" type="binary" value="216"/>
+		<item path="res00217.bin" type="binary" value="217"/>
+		<item path="res00218.bin" type="binary" value="218"/>
+		<item path="res00219.bin" type="binary" value="219"/>
+		<item path="res00220.bin" type="binary" value="220"/>
+		<item path="res00221.bin" type="binary" value="221"/>
+		<item path="res00222.bin" type="binary" value="222"/>
+		<item path="res00223.bin" type="binary" value="223"/>
+		<item path="res00224.bin" type="binary" value="224"/>
+		<item path="res00225.bin" type="binary" value="225"/>
+		<item path="res00226.bin" type="binary" value="226"/>
+		<item path="res00227.bin" type="binary" value="227"/>
+		<item path="res00228.bin" type="binary" value="228"/>
+		<item path="res00229.bin" type="binary" value="229"/>
+		<item path="res00230.bin" type="binary" value="230"/>
+		<item path="res00231.bin" type="binary" value="231"/>
+		<item path="res00232.bmp" type="image" value="232"/>
+		<item path="res00233.bmp" type="image" value="233"/>
+		<item path="res00234.bmp" type="image" value="234"/>
+		<item path="res00235.bmp" type="image" value="235"/>
+		<item path="res00236.bmp" type="image" value="236"/>
+		<item path="res00237.bmp" type="image" value="237"/>
+		<item path="res00238.bmp" type="image" value="238"/>
+		<item path="res00239.bmp" type="image" value="239"/>
+		<item path="res00240.bmp" type="image" value="240"/>
+		<item path="res00241.bmp" type="image" value="241"/>
+		<item path="res00242.bmp" type="image" value="242"/>
+		<item path="res00243.bmp" type="image" value="243"/>
+		<item path="res00244.bmp" type="image" value="244"/>
+		<item path="res00245.bmp" type="image" value="245"/>
+		<item path="res00246.bmp" type="image" value="246"/>
+		<item path="res00247.bmp" type="image" value="247"/>
+		<item path="res00248.bmp" type="image" value="248"/>
+		<item path="res00249.bmp" type="image" value="249"/>
+		<item path="res00250.bmp" type="image" value="250"/>
+		<item path="res00251.bmp" type="image" value="251"/>
+		<item path="res00252.bmp" type="image" value="252"/>
+		<item path="res00253.bmp" type="image" value="253"/>
+		<item path="res00254.bmp" type="image" value="254"/>
+		<item path="res00255.bmp" type="image" value="255"/>
+		<item path="res00256.bmp" type="image" value="256"/>
+		<item path="res00257.bmp" type="image" value="257"/>
+		<item path="res00258.bmp" type="image" value="258"/>
+		<item path="res00259.bmp" type="image" value="259"/>
+		<item path="res00260.bmp" type="image" value="260"/>
+		<item path="res00261.bmp" type="image" value="261"/>
+		<item path="res00262.bmp" type="image" value="262"/>
+		<item path="res00263.bmp" type="image" value="263"/>
+		<item path="res00264.bmp" type="image" value="264"/>
+		<item path="res00265.bmp" type="image" value="265"/>
+		<item path="res00266.bmp" type="image" value="266"/>
+		<item path="res00267.bmp" type="image" value="267"/>
+		<item path="res00268.bmp" type="image" value="268" colors="2"/>
+		<item path="res00269.bmp" type="image" value="269"/>
+		<item path="res00270.bmp" type="image" value="270"/>
+		<item path="res00271.bmp" type="image" value="271"/>
+		<item path="res00272.bmp" type="image" value="272"/>
+		<item path="res00273.bmp" type="image" value="273"/>
+		<item path="res00274.bmp" type="image" value="274"/>
+		<item path="res00275.bin" type="binary" value="275"/>
+		<item path="res00276.bin" type="binary" value="276"/>
+		<item path="res00277.bin" type="binary" value="277"/>
+		<item path="res00278.bin" type="binary" value="278"/>
+		<item path="res00279.bin" type="binary" value="279"/>
+		<item path="res00280.bin" type="binary" value="280"/>
+		<item path="res00281.bin" type="binary" value="281"/>
+		<item path="res00282.bin" type="binary" value="282"/>
+		<item path="res00283.bin" type="binary" value="283"/>
+		<item path="res00284.bin" type="binary" value="284"/>
+		<item path="res00285.bmp" type="image" value="285"/>
+		<item path="res00286.bin" type="binary" value="286"/>
+		<item path="res00287.bin" type="binary" value="287"/>
+		<item path="res00288.bin" type="binary" value="288"/>
+		<item path="res00289.bin" type="binary" value="289"/>
+		<item path="res00290.bin" type="binary" value="290"/>
+		<item path="res00291.bin" type="binary" value="291"/>
+		<item path="res00292.bmp" type="image" value="292"/>
+		<item path="res00293.bmp" type="image" value="293"/>
+		<item path="res00294.bmp" type="image" value="294"/>
+		<item path="res00295.bmp" type="image" value="295"/>
+		<item path="res00296.bmp" type="image" value="296"/>
+		<item path="res00297.bmp" type="image" value="297"/>
+		<item path="res00298.bmp" type="image" value="298"/>
+		<item path="res00299.bmp" type="image" value="299"/>
+		<item path="res00300.bmp" type="image" value="300"/>
+		<item path="res00301.bin" type="binary" value="301"/>
+		<item path="res00302.bin" type="binary" value="302"/>
+		<item path="res00303.bin" type="binary" value="303"/>
+		<item path="res00304.bin" type="binary" value="304"/>
+		<item path="res00305.bin" type="binary" value="305"/>
+		<item path="res00306.bin" type="binary" value="306"/>
+		<item path="res00307.bin" type="binary" value="307"/>
+		<item path="res00308.bin" type="binary" value="308"/>
+		<item path="res00309.bin" type="binary" value="309"/>
+		<item path="res00310.bin" type="binary" value="310"/>
+		<item path="res00311.bin" type="binary" value="311"/>
+		<item path="res00312.bin" type="binary" value="312"/>
+		<item path="res00313.bin" type="binary" value="313"/>
+		<item path="res00314.bin" type="binary" value="314"/>
+		<item path="res00315.bin" type="binary" value="315"/>
+		<item path="res00316.bin" type="binary" value="316"/>
+		<item path="res00317.bin" type="binary" value="317"/>
+		<item path="res00318.bin" type="binary" value="318"/>
+		<item path="res00319.bin" type="binary" value="319"/>
+		<item path="res00320.bin" type="binary" value="320"/>
+		<item path="res00321.bin" type="binary" value="321"/>
+		<item path="res00322.bin" type="binary" value="322"/>
+		<item path="res00323.bin" type="binary" value="323"/>
+		<item path="res00324.bmp" type="image" value="324"/>
+		<item path="res00325.bmp" type="image" value="325"/>
+		<item path="res00326.bmp" type="image" value="326"/>
+		<item path="res00327.bin" type="binary" value="327"/>
+		<item path="res00328.bin" type="binary" value="328"/>
+		<item path="res00329.bin" type="binary" value="329"/>
+		<item path="res00330.bin" type="binary" value="330"/>
+		<item path="res00331.bin" type="binary" value="331"/>
+		<item path="res00332.bin" type="binary" value="332"/>
+		<item path="res00333.bin" type="binary" value="333"/>
+		<item path="res00334.bin" type="binary" value="334"/>
+		<item path="res00335.bin" type="binary" value="335"/>
+		<item path="res00336.bin" type="binary" value="336"/>
+		<item path="res00337.bin" type="binary" value="337"/>
+		<item path="res00338.bin" type="binary" value="338"/>
+		<item path="res00339.bin" type="binary" value="339"/>
+		<item path="res00340.bin" type="binary" value="340"/>
+		<item path="res00341.bin" type="binary" value="341"/>
+		<item path="res00342.bin" type="binary" value="342"/>
+		<item path="res00343.bin" type="binary" value="343"/>
+		<item path="res00344.bmp" type="image" value="344"/>
+		<item path="res00345.bin" type="binary" value="345"/>
+		<item path="res00346.bmp" type="image" value="346"/>
+		<item path="res00347.bmp" type="image" value="347"/>
+		<item path="res00348.bmp" type="image" value="348"/>
+		<item path="res00349.bmp" type="image" value="349"/>
+		<item path="res00350.bmp" type="image" value="350"/>
+		<item path="res00351.bmp" type="image" value="351"/>
+		<item path="res00360.bin" type="binary" value="360"/>
+		<item path="res00361.bmp" type="image" value="361"/>
+		<item path="res00362.bmp" type="image" value="362"/>
+		<item path="res00363.bmp" type="image" value="363"/>
+		<item path="res00364.bmp" type="image" value="364"/>
+		<item path="res00365.bmp" type="image" value="365"/>
+		<item path="res00366.bmp" type="image" value="366"/>
+		<item path="res00367.bmp" type="image" value="367"/>
+		<item path="res00368.bmp" type="image" value="368"/>
+		<item path="res00369.bmp" type="image" value="369"/>
+		<item path="res00370.bmp" type="image" value="370"/>
+		<item path="res00371.bmp" type="image" value="371"/>
+		<item path="res00372.bmp" type="image" value="372"/>
+		<item path="res00373.bmp" type="image" value="373"/>
+		<item path="res00374.bmp" type="image" value="374"/>
+		<item path="res00375.bmp" type="image" value="375"/>
+		<item path="res00376.bmp" type="image" value="376"/>
+		<item path="res00377.bmp" type="image" value="377"/>
+		<item path="res01230.bmp" type="image" value="1230"/>
+		<item path="res01231.bmp" type="image" value="1231"/>
+		<item path="res01286.bmp" type="image" value="1286"/>
+		<item path="res01287.bmp" type="image" value="1287"/>
+		<item path="res01288.bmp" type="image" value="1288"/>
+		<item path="res01289.bmp" type="image" value="1289"/>
+		<item path="res01290.bmp" type="image" value="1290"/>
+		<item path="res01291.bmp" type="image" value="1291"/>
+		<item path="res01301.bmp" type="image" value="1301"/>
+		<item path="res01302.bmp" type="image" value="1302"/>
+		<item path="res01303.bmp" type="image" value="1303"/>
+		<item path="res01304.bmp" type="image" value="1304"/>
+		<item path="res01305.bmp" type="image" value="1305"/>
+		<item path="res01306.bmp" type="image" value="1306"/>
+		<item path="res01307.bmp" type="image" value="1307"/>
+		<item path="res01308.bmp" type="image" value="1308"/>
+		<item path="res01309.bmp" type="image" value="1309"/>
+		<item path="res01310.bmp" type="image" value="1310"/>
+		<item path="res01311.bmp" type="image" value="1311"/>
+		<item path="res01312.bmp" type="image" value="1312"/>
+		<item path="res01313.bmp" type="image" value="1313"/>
+   <folder colors="2">
+		<item path="res01314.bmp" type="image" value="1314"/>
+		<item path="res01315.bmp" type="image" value="1315"/>
+		<item path="res01316.bmp" type="image" value="1316"/>
+		<item path="res01317.bmp" type="image" value="1317"/>
+		<item path="res01318.bmp" type="image" value="1318"/>
+		<item path="res01319.bmp" type="image" value="1319"/>
+		<item path="res01320.bmp" type="image" value="1320"/>
+		<item path="res01321.bmp" type="image" value="1321"/>
+		<item path="res01322.bmp" type="image" value="1322"/>
+		<item path="res01323.bmp" type="image" value="1323"/>
+   </folder>
+		<item path="res01327.bmp" type="image" value="1327"/>
+		<item path="res01328.bmp" type="image" value="1328"/>
+		<item path="res01329.bmp" type="image" value="1329"/>
+		<item path="res01330.bmp" type="image" value="1330"/>
+		<item path="res01331.bmp" type="image" value="1331"/>
+		<item path="res01332.bmp" type="image" value="1332"/>
+		<item path="res01333.bmp" type="image" value="1333"/>
+		<item path="res01334.bmp" type="image" value="1334"/>
+		<item path="res01335.bmp" type="image" value="1335"/>
+		<item path="res01336.bmp" type="image" value="1336"/>
+		<item path="res01337.bmp" type="image" value="1337"/>
+		<item path="res01338.bmp" type="image" value="1338"/>
+		<item path="res01339.bmp" type="image" value="1339"/>
+		<item path="res01340.bmp" type="image" value="1340"/>
+		<item path="res01341.bmp" type="image" value="1341"/>
+		<item path="res01342.bmp" type="image" value="1342"/>
+		<item path="res01343.bmp" type="image" value="1343"/>
+	</folder>
+
+	<folder path="EPALACE" file="EPALACE.DAT" palette="0" paletteindex="" index="pop1">
+		<item path="res00200.bin" type="binary" value="200"/>
+		<item path="res00201.bin" type="binary" value="201"/>
+		<item path="res00202.bin" type="binary" value="202"/>
+		<item path="res00203.bin" type="binary" value="203"/>
+		<item path="res00204.bin" type="binary" value="204"/>
+		<item path="res00205.bin" type="binary" value="205"/>
+		<item path="res00206.bin" type="binary" value="206"/>
+		<item path="res00207.bin" type="binary" value="207"/>
+		<item path="res00208.bin" type="binary" value="208"/>
+		<item path="res00209.bin" type="binary" value="209"/>
+		<item path="res00210.bin" type="binary" value="210"/>
+		<item path="res00211.bin" type="binary" value="211"/>
+		<item path="res00212.bin" type="binary" value="212"/>
+		<item path="res00213.bin" type="binary" value="213"/>
+		<item path="res00214.bin" type="binary" value="214"/>
+		<item path="res00215.bin" type="binary" value="215"/>
+		<item path="res00216.bin" type="binary" value="216"/>
+		<item path="res00217.bin" type="binary" value="217"/>
+		<item path="res00218.bin" type="binary" value="218"/>
+		<item path="res00219.bin" type="binary" value="219"/>
+		<item path="res00220.bin" type="binary" value="220"/>
+		<item path="res00221.bin" type="binary" value="221"/>
+		<item path="res00222.bin" type="binary" value="222"/>
+		<item path="res00223.bin" type="binary" value="223"/>
+		<item path="res00224.bin" type="binary" value="224"/>
+		<item path="res00225.bin" type="binary" value="225"/>
+		<item path="res00226.bin" type="binary" value="226"/>
+		<item path="res00227.bin" type="binary" value="227"/>
+		<item path="res00228.bin" type="binary" value="228"/>
+		<item path="res00229.bin" type="binary" value="229"/>
+		<item path="res00230.bin" type="binary" value="230"/>
+		<item path="res00231.bin" type="binary" value="231"/>
+		<item path="res00232.bmp" type="image" value="232"/>
+		<item path="res00233.bmp" type="image" value="233"/>
+		<item path="res00234.bmp" type="image" value="234"/>
+		<item path="res00235.bmp" type="image" value="235"/>
+		<item path="res00236.bmp" type="image" value="236"/>
+		<item path="res00237.bmp" type="image" value="237"/>
+		<item path="res00238.bmp" type="image" value="238"/>
+		<item path="res00239.bmp" type="image" value="239"/>
+		<item path="res00240.bmp" type="image" value="240"/>
+		<item path="res00241.bmp" type="image" value="241"/>
+		<item path="res00242.bmp" type="image" value="242"/>
+		<item path="res00243.bmp" type="image" value="243"/>
+		<item path="res00244.bmp" type="image" value="244"/>
+		<item path="res00245.bmp" type="image" value="245"/>
+		<item path="res00246.bmp" type="image" value="246"/>
+		<item path="res00247.bmp" type="image" value="247"/>
+		<item path="res00248.bmp" type="image" value="248"/>
+		<item path="res00249.bmp" type="image" value="249"/>
+		<item path="res00250.bmp" type="image" value="250"/>
+		<item path="res00251.bmp" type="image" value="251"/>
+		<item path="res00252.bmp" type="image" value="252"/>
+		<item path="res00253.bmp" type="image" value="253"/>
+		<item path="res00254.bmp" type="image" value="254"/>
+		<item path="res00255.bmp" type="image" value="255"/>
+		<item path="res00256.bmp" type="image" value="256"/>
+		<item path="res00257.bmp" type="image" value="257"/>
+		<item path="res00258.bmp" type="image" value="258"/>
+		<item path="res00259.bmp" type="image" value="259"/>
+		<item path="res00260.bmp" type="image" value="260"/>
+		<item path="res00261.bmp" type="image" value="261"/>
+		<item path="res00262.bmp" type="image" value="262"/>
+		<item path="res00263.bmp" type="image" value="263"/>
+		<item path="res00264.bmp" type="image" value="264"/>
+		<item path="res00265.bmp" type="image" value="265"/>
+		<item path="res00266.bmp" type="image" value="266"/>
+		<item path="res00267.bmp" type="image" value="267"/>
+		<item path="res00268.bmp" type="image" value="268" colors="2"/>
+		<item path="res00269.bmp" type="image" value="269"/>
+		<item path="res00270.bmp" type="image" value="270"/>
+		<item path="res00271.bmp" type="image" value="271"/>
+		<item path="res00272.bmp" type="image" value="272"/>
+		<item path="res00273.bmp" type="image" value="273"/>
+		<item path="res00274.bmp" type="image" value="274"/>
+		<item path="res00275.bin" type="binary" value="275"/>
+		<item path="res00276.bin" type="binary" value="276"/>
+		<item path="res00277.bin" type="binary" value="277"/>
+		<item path="res00278.bin" type="binary" value="278"/>
+		<item path="res00279.bin" type="binary" value="279"/>
+		<item path="res00280.bin" type="binary" value="280"/>
+		<item path="res00281.bin" type="binary" value="281"/>
+		<item path="res00282.bin" type="binary" value="282"/>
+		<item path="res00283.bin" type="binary" value="283"/>
+		<item path="res00284.bmp" type="image" value="284"/>
+		<item path="res00285.bmp" type="image" value="285"/>
+		<item path="res00286.bin" type="binary" value="286"/>
+		<item path="res00287.bin" type="binary" value="287"/>
+		<item path="res00288.bin" type="binary" value="288"/>
+		<item path="res00289.bin" type="binary" value="289"/>
+		<item path="res00290.bin" type="binary" value="290"/>
+		<item path="res00291.bin" type="binary" value="291"/>
+		<item path="res00292.bmp" type="image" value="292"/>
+		<item path="res00293.bmp" type="image" value="293"/>
+		<item path="res00294.bmp" type="image" value="294"/>
+		<item path="res00295.bmp" type="image" value="295"/>
+		<item path="res00296.bmp" type="image" value="296"/>
+		<item path="res00297.bmp" type="image" value="297"/>
+		<item path="res00298.bmp" type="image" value="298"/>
+		<item path="res00299.bmp" type="image" value="299"/>
+		<item path="res00300.bmp" type="image" value="300"/>
+		<item path="res00301.bin" type="binary" value="301"/>
+		<item path="res00302.bin" type="binary" value="302"/>
+		<item path="res00303.bin" type="binary" value="303"/>
+		<item path="res00304.bin" type="binary" value="304"/>
+		<item path="res00305.bin" type="binary" value="305"/>
+		<item path="res00306.bin" type="binary" value="306"/>
+		<item path="res00307.bin" type="binary" value="307"/>
+		<item path="res00308.bin" type="binary" value="308"/>
+		<item path="res00309.bin" type="binary" value="309"/>
+		<item path="res00310.bin" type="binary" value="310"/>
+		<item path="res00311.bin" type="binary" value="311"/>
+		<item path="res00312.bin" type="binary" value="312"/>
+		<item path="res00313.bin" type="binary" value="313"/>
+		<item path="res00314.bin" type="binary" value="314"/>
+		<item path="res00315.bin" type="binary" value="315"/>
+		<item path="res00316.bin" type="binary" value="316"/>
+		<item path="res00317.bin" type="binary" value="317"/>
+		<item path="res00318.bin" type="binary" value="318"/>
+		<item path="res00319.bin" type="binary" value="319"/>
+		<item path="res00320.bin" type="binary" value="320"/>
+		<item path="res00321.bin" type="binary" value="321"/>
+		<item path="res00322.bin" type="binary" value="322"/>
+		<item path="res00323.bin" type="binary" value="323"/>
+		<item path="res00324.bmp" type="image" value="324"/>
+		<item path="res00325.bmp" type="image" value="325"/>
+		<item path="res00326.bmp" type="image" value="326"/>
+		<item path="res00327.bin" type="binary" value="327"/>
+		<item path="res00328.bin" type="binary" value="328"/>
+		<item path="res00329.bin" type="binary" value="329"/>
+		<item path="res00330.bin" type="binary" value="330"/>
+		<item path="res00331.bin" type="binary" value="331"/>
+		<item path="res00332.bin" type="binary" value="332"/>
+		<item path="res00333.bin" type="binary" value="333"/>
+		<item path="res00334.bin" type="binary" value="334"/>
+		<item path="res00335.bin" type="binary" value="335"/>
+		<item path="res00336.bin" type="binary" value="336"/>
+		<item path="res00337.bin" type="binary" value="337"/>
+		<item path="res00338.bin" type="binary" value="338"/>
+		<item path="res00339.bin" type="binary" value="339"/>
+		<item path="res00340.bin" type="binary" value="340"/>
+		<item path="res00341.bin" type="binary" value="341"/>
+		<item path="res00342.bin" type="binary" value="342"/>
+		<item path="res00343.bin" type="binary" value="343"/>
+		<item path="res00344.bmp" type="image" value="344"/>
+		<item path="res00345.bmp" type="image" value="345"/>
+		<item path="res00346.bmp" type="image" value="346"/>
+		<item path="res00347.bmp" type="image" value="347"/>
+		<item path="res00348.bin" type="binary" value="348"/>
+		<item path="res00349.bmp" type="image" value="349"/>
+		<item path="res00350.bmp" type="image" value="350"/>
+		<item path="res00351.bmp" type="image" value="351"/>
+		<item path="res00360.bin" type="binary" value="360"/>
+		<item path="res00361.bmp" type="image" value="361"/>
+		<item path="res00362.bmp" type="image" value="362"/>
+		<item path="res00363.bmp" type="image" value="363"/>
+		<item path="res00364.bmp" type="image" value="364"/>
+		<item path="res00365.bmp" type="image" value="365"/>
+		<item path="res00366.bmp" type="image" value="366"/>
+		<item path="res00367.bmp" type="image" value="367"/>
+		<item path="res00368.bmp" type="image" value="368"/>
+		<item path="res00369.bmp" type="image" value="369"/>
+		<item path="res00370.bmp" type="image" value="370"/>
+		<item path="res00371.bmp" type="image" value="371"/>
+		<item path="res00372.bmp" type="image" value="372"/>
+		<item path="res00373.bmp" type="image" value="373"/>
+		<item path="res01201.bmp" type="image" value="1201"/>
+		<item path="res01202.bmp" type="image" value="1202"/>
+		<item path="res01203.bmp" type="image" value="1203"/>
+		<item path="res01204.bmp" type="image" value="1204"/>
+		<item path="res01205.bmp" type="image" value="1205"/>
+		<item path="res01206.bmp" type="image" value="1206"/>
+		<item path="res01207.bin" type="binary" value="1207"/>
+		<item path="res01208.bin" type="binary" value="1208"/>
+		<item path="res01209.bmp" type="image" value="1209"/>
+		<item path="res01210.bmp" type="image" value="1210"/>
+		<item path="res01211.bmp" type="image" value="1211"/>
+		<item path="res01212.bmp" type="image" value="1212"/>
+		<item path="res01213.bmp" type="image" value="1213"/>
+		<item path="res01275.bmp" type="image" value="1275"/>
+		<item path="res01276.bin" type="binary" value="1276"/>
+		<item path="res01277.bmp" type="image" value="1277"/>
+		<item path="res01278.bmp" type="image" value="1278"/>
+		<item path="res01279.bin" type="binary" value="1279"/>
+		<item path="res01280.bmp" type="image" value="1280"/>
+		<item path="res01281.bmp" type="image" value="1281"/>
+		<item path="res01282.bmp" type="image" value="1282"/>
+		<item path="res01283.bmp" type="image" value="1283"/>
+		<item path="res01286.bmp" type="image" value="1286"/>
+		<item path="res01287.bmp" type="image" value="1287"/>
+		<item path="res01288.bmp" type="image" value="1288"/>
+		<item path="res01289.bmp" type="image" value="1289"/>
+		<item path="res01290.bmp" type="image" value="1290"/>
+		<item path="res01291.bmp" type="image" value="1291"/>
+		<item path="res01301.bmp" type="image" value="1301"/>
+		<item path="res01302.bmp" type="image" value="1302"/>
+		<item path="res01303.bmp" type="image" value="1303"/>
+		<item path="res01304.bmp" type="image" value="1304"/>
+		<item path="res01305.bmp" type="image" value="1305"/>
+		<item path="res01306.bmp" type="image" value="1306"/>
+		<item path="res01307.bmp" type="image" value="1307"/>
+		<item path="res01308.bmp" type="image" value="1308"/>
+		<item path="res01309.bmp" type="image" value="1309"/>
+		<item path="res01310.bmp" type="image" value="1310"/>
+		<item path="res01311.bmp" type="image" value="1311"/>
+		<item path="res01312.bmp" type="image" value="1312"/>
+		<item path="res01313.bmp" type="image" value="1313"/>
+   <folder colors="2">
+		<item path="res01314.bmp" type="image" value="1314"/>
+		<item path="res01315.bmp" type="image" value="1315"/>
+		<item path="res01316.bmp" type="image" value="1316"/>
+		<item path="res01317.bmp" type="image" value="1317"/>
+		<item path="res01318.bmp" type="image" value="1318"/>
+		<item path="res01319.bmp" type="image" value="1319"/>
+		<item path="res01320.bmp" type="image" value="1320"/>
+		<item path="res01321.bmp" type="image" value="1321"/>
+		<item path="res01322.bmp" type="image" value="1322"/>
+		<item path="res01323.bmp" type="image" value="1323"/>
+   </folder>
+		<item path="res01327.bmp" type="image" value="1327"/>
+		<item path="res01328.bmp" type="image" value="1328"/>
+		<item path="res01329.bmp" type="image" value="1329"/>
+		<item path="res01330.bmp" type="image" value="1330"/>
+		<item path="res01331.bmp" type="image" value="1331"/>
+		<item path="res01332.bmp" type="image" value="1332"/>
+		<item path="res01333.bmp" type="image" value="1333"/>
+		<item path="res01334.bmp" type="image" value="1334"/>
+		<item path="res01335.bmp" type="image" value="1335"/>
+		<item path="res01336.bmp" type="image" value="1336"/>
+		<item path="res01337.bmp" type="image" value="1337"/>
+		<item path="res01338.bmp" type="image" value="1338"/>
+		<item path="res01339.bmp" type="image" value="1339"/>
+		<item path="res01340.bmp" type="image" value="1340"/>
+		<item path="res01341.bmp" type="image" value="1341"/>
+		<item path="res01342.bmp" type="image" value="1342"/>
+		<item path="res01343.bmp" type="image" value="1343"/>
+	</folder>
+
+<!-- PoP2 resources are in pop2.xml -->
+
+</resources>
+
+<!--
+File Format:
+
+Attributes:
+ resources:
+  o version: the version of the file (mandatory)
+ folder:
+  o type (inheritable): one of the list below
+    * autodetect (default)
+    * level
+    * image
+    * wave
+    * midi
+    * binary
+    * palette
+    * pcspeaker
+    * information
+    Note:
+     - See PR readme for details on item types
+  o palette (inheritable):
+    * number: the palette ID associated to the images in this folder if applicable
+    * "monochrome": this means the image has a black and white monochrome palette
+    Notes:
+     - the palette attribute will be ignored in resources other than images.
+     - if the number value is not a valid palette, the image will be extracted in other
+       palette from the file or a random generated palette.
+	o paletteindex (inheritable): the name of the index the palette has to be looked into
+	  Note:
+		 - If not speficied current item index value will be used
+  o name or title (not inheritable): the name of the folder
+  o desc (not inheritable): a description
+  o path (partially inheritable): a path where the folder is extracted to.
+    Contained items will inherit this path. There must be only one path per item.
+    If missing PR will use unknown/(filename)/(type desc)(item id).(type extension)
+  o file (inheritable): the file where the item is located
+ item:
+  o value: the item ID (mandatory)
+  o index (inheritable): the index name (mandatory but may be inherited from a folder)
+  o order (inheritable): after the value and index, the order varies to make an item
+    unique (defaults to 0)
+  o flags (inheritable): some pop2 file format flags (mandatory for pop2 files)
+  o file: see folder file (mandatory but may be inherited from a folder).
+  o type: see folder type. May be inherited, omissions means autodetect.
+  o palette: see folder palette. Mandatory for image types but may be inherited,
+    when omited a default palette will be used. This attribute is ignored in other items
+  o paletteindex: see folder paletteindex. Mandatory for image types but may be inherited.
+  o paletteorder: in case two palettes with the same index and value appears, this option
+    lets you choose the right one. Defaults to 0.
+  o desc: a description (mostly used by PR to add in the .plv files)
+  o name or title: the name of the item (mostly used by PR to add in the .plv files)
+  o path: the name of the file it will be extracted
+  o number or levelnumber: an additional resource or level number
+
+Distributed versions if this file are read only and MUST have the GPL header,
+if you want to help please contact us in www.princed.org. Find DTDs in the
+princed home page.
+
+-->
+
