@@ -329,6 +329,7 @@ int getNextTag(char** pString, char** value) {
 		// Copy tag name.
 		// size is one bigger than the tag name.
 		size=(int)((long int)i-(long int)start)+1; /* Note: casted to long for portability with 64 bits architectures */
+		if (result==XML_WAS_CLOSER) i++; // Skip over '>' of closing tag.
 		*value=(char*)malloc(size);
 		if (*value==NULL) return PR_RESULT_ERR_MEMORY;
 		memcpy(*value,start,size-1);
