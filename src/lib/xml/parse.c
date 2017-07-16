@@ -301,10 +301,12 @@ int getNextTag(char** pString, char** value) {
 		i++;
 		parse_Separate;
 		if (*i=='/') {
+			// closing tag
 			result=XML_WAS_CLOSER;
 			i++;
 		} else {
 			if ((*i=='!')||(*i=='?')) {
+				// It is a comment or processing instruction: skip it.
 				while ((*i)&&((*i)!='>')) i++;
 				if (!(*i)) parse_Error;
 				i++;
@@ -313,6 +315,7 @@ int getNextTag(char** pString, char** value) {
 				*pString=i;
 				return result;
 			} else {
+				// opening tag
 				result=XML_WAS_TAG;
 			}
 		}
@@ -320,9 +323,12 @@ int getNextTag(char** pString, char** value) {
 		parse_NextWord(i);
 		if (start==i) parse_Error;
 		if (*i==0)    parse_Error;
-		i++;
+		// Don't skip over next char, it might be '>'.
+		//i++;
 
-		size=(int)((long int)i-(long int)start); /* Note: casted to long for portability with 64 bits architectures */
+		// Copy tag name.
+		// size is one bigger than the tag name.
+		size=(int)((long int)i-(long int)start)+1; /* Note: casted to long for portability with 64 bits architectures */
 		*value=(char*)malloc(size);
 		if (*value==NULL) return PR_RESULT_ERR_MEMORY;
 		memcpy(*value,start,size-1);
@@ -330,6 +336,7 @@ int getNextTag(char** pString, char** value) {
 		*pString=i-(!result);
 		return result;
 	}
+	// It is not a tag but plain text:
 	start=i;
 	while ((*i)&&((*i)!='<')) i++;
 	if (!(*i)) return XML_WAS_EOD;
