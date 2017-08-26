@@ -101,11 +101,22 @@ pr.h: Princed Resources : English language strings
 	"XML file cannot be open",\
 	"Input line syntax error",\
 	"Extraction error",\
-	"-19",\
+	"PR_RESULT_ERR_WRONG_PRIMITIVE_CALL",\
 	"You may select one directory to export all DAT files or specify DAT files; both actions are not allowed",\
 	"Recursive flag must not be set when you import files",\
 	"No files selected", /* should never happen because default is "." */\
-	"-23"}
+	"PR_RESULT_INDEX_NOT_FOUND", \
+	"PR_RESULT_CHECKSUM_ERROR", \
+	"PR_RESULT_XML_AND_DAT_FORMAT_DO_NOT_MATCH", \
+	"PR_RESULT_COMPRESS_RESULT_FATAL", \
+	"PR_RESULT_COMPRESS_RESULT_WARNING", \
+	"WAV bitrate must be 8 bits per sample", \
+	"WAV sample rate must be < 65536 Hz", \
+	"WAV must have only one channel", \
+	"BMP has wrong bit-depth", \
+	"RESULT_PAL_UNSUPPORTED", \
+	"Bad file format", \
+	}
 
 
 #define PR_TEXT_TYPES {\

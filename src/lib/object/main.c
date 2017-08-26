@@ -292,7 +292,7 @@ tObject readObject(const char* file,tResource* res,int *result) {
 	}
 	o.type=res->type;
 
-	if(o.obj==NULL){ *result=PR_RESULT_ERR_FILE_NOT_OPEN_NOTFOUND; return o; }
+	if(o.obj==NULL){ /* *result=PR_RESULT_ERR_FILE_NOT_OPEN_NOTFOUND; */ return o; }
 /*if(o.obj==NULL) printf("o.obj==NULL in readObject, res->type=%d\n",res->type);*/
 
 	return o;

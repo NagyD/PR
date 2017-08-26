@@ -174,15 +174,22 @@ int readBmp(const char* file, unsigned char** data, int *ph, int *pw,  int *pbit
 	lineSerialization=(-lineWidth)&3;
 	filesize=offset+(lineWidth+lineSerialization)*height;*/
 
-	/* Read ColorTable */
-	fseek(bitmap,headersize+0x0E,SEEK_SET);
-	aux=0;
-	*colorArray=malloc(sizeof(tColor)*colours);
-	for (a=0;a<colours;a++) {
-		ok=ok&&freadchar(&((*colorArray)[a].b),bitmap); /* Blue  */
-		ok=ok&&freadchar(&((*colorArray)[a].g),bitmap); /* Green */
-		ok=ok&&freadchar(&((*colorArray)[a].r),bitmap); /* Red   */
-		ok=ok&&freadchar(&aux,bitmap); /* alpha */
+	if (bits <= 8) {
+		/* Read ColorTable */
+		fseek(bitmap,headersize+0x0E,SEEK_SET);
+		aux=0;
+		*colorArray=malloc(sizeof(tColor)*colours);
+		for (a=0;a<colours;a++) {
+			ok=ok&&freadchar(&((*colorArray)[a].b),bitmap); /* Blue  */
+			ok=ok&&freadchar(&((*colorArray)[a].g),bitmap); /* Green */
+			ok=ok&&freadchar(&((*colorArray)[a].r),bitmap); /* Red   */
+			ok=ok&&freadchar(&aux,bitmap); /* alpha */
+		}
+	} else {
+		// RGB images don't have palettes.
+		// We don't support those anyway, but we want a bpp error instead of the generic PR_RESULT_ERR_FILE_NOT_READ_ACCESS at the bottom of this function.
+		*colorArray=NULL;
+		printf("Error: RGB images are not supported!\n");
 	}
 
 	/* Write data */
@@ -244,7 +251,7 @@ int readBmp(const char* file, unsigned char** data, int *ph, int *pw,  int *pbit
 		free(*colorArray);
 		free(*data);
 /*printf("readBmp() returning error because !ok\n");*/
-		return PR_RESULT_ERR_FILE_NOT_READ_ACCESS; /* TODO: use a bad format code */
+		return PR_RESULT_BAD_FILE_FORMAT;
 	}
 	
 	*pbits        = bits;

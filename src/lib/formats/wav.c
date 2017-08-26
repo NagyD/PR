@@ -93,7 +93,7 @@ int readWav(const char* file, tBinary* snd, int *pchannels, long *psamplerate, l
 	long int SubChunk2Size=0;
 	
 	fd=fopen(file,"rb");
-	if (!fd) return PR_RESULT_ERR_FILE_NOT_READ_ACCESS; 
+	if (!fd) return PR_RESULT_ERR_FILE_NOT_READ_ACCESS;
 
 	/* Read headers */
 	ok=fread(magic,4,1,fd);
@@ -130,7 +130,7 @@ int readWav(const char* file, tBinary* snd, int *pchannels, long *psamplerate, l
 		fclose(fd);
 	} else {
 		fclose(fd);
-		return PR_RESULT_ERR_FILE_NOT_READ_ACCESS; /* TODO: use a bad format code */
+		return PR_RESULT_BAD_FILE_FORMAT;
 	}
 	/* TODO: check eof */
 	
@@ -150,7 +150,7 @@ int readWav(const char* file, tBinary* snd, int *pchannels, long *psamplerate, l
 
 	if (!ok) {
 		free(snd->data);
-		return PR_RESULT_ERR_FILE_NOT_READ_ACCESS; /* TODO: use a bad format code */
+		return PR_RESULT_BAD_FILE_FORMAT;
 	}
 	
 	*pchannels    = NumChannels;
