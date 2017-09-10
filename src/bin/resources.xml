@@ -381,7 +381,7 @@ resources.xml: Princed Resources : Resource tree
   </folder>
 
   <folder name="floor panels" path="floor panels">
-   <item value="236" path="closer base.bmp"/>
+   <item value="236" path="closer base pressed.bmp"/>
    <item value="297" path="broken left.bmp"/>
    <item value="300" path="broken front.bmp"/>
    <item value="298" path="broken right.bmp"/>
@@ -398,7 +398,7 @@ resources.xml: Princed Resources : Resource tree
    <item value="274" path="loose base02.bmp"/>
    <item value="296" path="closer base unpressed.bmp"/>
    <item value="347" path="opener left unpressed.bmp"/>
-   <item value="235" path="opener left unpressed02.bmp"/>
+   <item value="235" path="closer right pressed.bmp"/>
    <item value="349" path="opener base unpressed.bmp"/>
    <item value="350" path="front01.bmp"/>
    <item value="351" path="front02.bmp"/>
