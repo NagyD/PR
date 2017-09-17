@@ -120,6 +120,8 @@ int mExpandGraphic256(const unsigned char* data,tImage *image, int dataSizeInByt
 
 	int imageSizeInBytes=0;
 
+	if (dataSizeInBytes < 6) return COMPRESS_RESULT_FATAL; // Empty images are only 2 bytes: 00 00.
+
 	image->height=array2short(data);
 	data+=2;
 	image->width =array2short(data);
