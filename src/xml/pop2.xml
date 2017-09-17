@@ -1733,35 +1733,35 @@ pop2.xml: Princed Resources : PoP2 Resource tree
 		<item path="____00027.bin" type="binary" value="27" index="" />
 <!-- resources 2000-2033 are levels -->
 	<!-- regular levels -->
-		<item path="____02000.plv" type="level" value="2000" index="" />
-		<item path="____02001.plv" type="level" value="2001" index="" />
-		<item path="____02002.plv" type="level" value="2002" index="" />
-		<item path="____02003.plv" type="level" value="2003" index="" />
-		<item path="____02004.plv" type="level" value="2004" index="" />
-		<item path="____02005.plv" type="level" value="2005" index="" />
-		<item path="____02006.plv" type="level" value="2006" index="" />
-		<item path="____02007.plv" type="level" value="2007" index="" />
-		<item path="____02008.plv" type="level" value="2008" index="" />
-		<item path="____02009.plv" type="level" value="2009" index="" />
-		<item path="____02010.plv" type="level" value="2010" index="" />
-		<item path="____02011.plv" type="level" value="2011" index="" />
-		<item path="____02012.plv" type="level" value="2012" index="" />
-		<item path="____02013.plv" type="level" value="2013" index="" />
+		<item path="____02000.plv" type="level" value="2000" index="" number=" 1" />
+		<item path="____02001.plv" type="level" value="2001" index="" number=" 2" />
+		<item path="____02002.plv" type="level" value="2002" index="" number=" 3" />
+		<item path="____02003.plv" type="level" value="2003" index="" number=" 4" />
+		<item path="____02004.plv" type="level" value="2004" index="" number=" 5" />
+		<item path="____02005.plv" type="level" value="2005" index="" number=" 6" />
+		<item path="____02006.plv" type="level" value="2006" index="" number=" 7" />
+		<item path="____02007.plv" type="level" value="2007" index="" number=" 8" />
+		<item path="____02008.plv" type="level" value="2008" index="" number=" 9" />
+		<item path="____02009.plv" type="level" value="2009" index="" number="10" />
+		<item path="____02010.plv" type="level" value="2010" index="" number="11" />
+		<item path="____02011.plv" type="level" value="2011" index="" number="12" />
+		<item path="____02012.plv" type="level" value="2012" index="" number="13" />
+		<item path="____02013.plv" type="level" value="2013" index="" number="14" />
 	<!-- levels that you can play with the GAMEPLAY command line option -->
-		<item path="____02020.plv" type="level" value="2020" index="" />
-		<item path="____02021.plv" type="level" value="2021" index="" />
-		<item path="____02022.plv" type="level" value="2022" index="" />
-		<item path="____02023.plv" type="level" value="2023" index="" />
-		<item path="____02024.plv" type="level" value="2024" index="" />
-		<item path="____02025.plv" type="level" value="2025" index="" />
-		<item path="____02026.plv" type="level" value="2026" index="" />
-		<item path="____02027.plv" type="level" value="2027" index="" />
-		<item path="____02028.plv" type="level" value="2028" index="" />
-		<item path="____02029.plv" type="level" value="2029" index="" />
-		<item path="____02030.plv" type="level" value="2030" index="" />
-		<item path="____02031.plv" type="level" value="2031" index="" />
-		<item path="____02032.plv" type="level" value="2032" index="" />
-		<item path="____02033.plv" type="level" value="2033" index="" />
+		<item path="____02020.plv" type="level" value="2020" index="" number="15" />
+		<item path="____02021.plv" type="level" value="2021" index="" number="16" />
+		<item path="____02022.plv" type="level" value="2022" index="" number="17" />
+		<item path="____02023.plv" type="level" value="2023" index="" number="18" />
+		<item path="____02024.plv" type="level" value="2024" index="" number="19" />
+		<item path="____02025.plv" type="level" value="2025" index="" number="20" />
+		<item path="____02026.plv" type="level" value="2026" index="" number="21" />
+		<item path="____02027.plv" type="level" value="2027" index="" number="22" />
+		<item path="____02028.plv" type="level" value="2028" index="" number="23" />
+		<item path="____02029.plv" type="level" value="2029" index="" number="24" />
+		<item path="____02030.plv" type="level" value="2030" index="" number="25" />
+		<item path="____02031.plv" type="level" value="2031" index="" number="26" />
+		<item path="____02032.plv" type="level" value="2032" index="" number="27" />
+		<item path="____02033.plv" type="level" value="2033" index="" number="28" />
 
 		<item path="____08000.bin" type="binary" value="8000" index="" />
 		<item path="font00010.bin" type="binary" value="10" index="font" />
