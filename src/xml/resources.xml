@@ -136,11 +136,11 @@ resources.xml: Princed Resources : Resource tree
    <item value="299" path="floor.bmp"/>
    <item value="344" path="stairs.bmp"/>
   </folder>
-  <folder name="door" path="door">
-   <item value="246" path="door frame left.bmp"/>
-   <item value="247" path="door frame right.bmp"/>
-   <item value="248" path="door frame right top.bmp"/>
-   <item value="249" path="door frame left pole.bmp"/>
+  <folder name="gate" path="gate">
+   <item value="246" path="gate frame left.bmp"/>
+   <item value="247" path="gate frame right.bmp"/>
+   <item value="248" path="gate frame right top.bmp"/>
+   <item value="249" path="gate frame left pole.bmp"/>
    <item value="250" path="res00250.bmp"/>
    <item value="251" path="res00251.bmp"/>
    <item value="252" path="res00252.bmp"/>
@@ -425,11 +425,11 @@ resources.xml: Princed Resources : Resource tree
    <item value="1291" path="big pillar upper left.bmp"/>
   </folder>
 
-  <folder name="door" path="door">
-   <item value="246" path="door frame left.bmp"/>
-   <item value="247" path="door frame right.bmp"/>
-   <item value="248" path="door frame right top.bmp"/>
-   <item value="249" path="door frame left pole.bmp"/>
+  <folder name="gate" path="gate">
+   <item value="246" path="gate frame left.bmp"/>
+   <item value="247" path="gate frame right.bmp"/>
+   <item value="248" path="gate frame right top.bmp"/>
+   <item value="249" path="gate frame left pole.bmp"/>
    <item value="250" path="res00250.bmp"/>
    <item value="251" path="res00251.bmp"/>
    <item value="252" path="res00252.bmp"/>
@@ -772,7 +772,7 @@ resources.xml: Princed Resources : Resource tree
   </folder>
 
   <folder name="sword" path="sword">
-   <folder name="in the floor" path="in the floor" palette="150">
+   <folder name="on the floor" path="on the floor" palette="150">
     <item value="160" path="normal.bmp"/>
     <item value="161" path="bright.bmp"/>
    </folder>
@@ -910,7 +910,7 @@ resources.xml: Princed Resources : Resource tree
    <item value="477" path="frame13.bmp"/>
   </folder>
   <folder path="deaths">
-   <item value="478" path="chopped.bmp"/>
+   <item value="478" path="chomped.bmp"/>
    <item value="479" path="spiked.bmp"/>
    <item value="480" path="dead.bmp"/>
   </folder>
@@ -989,7 +989,7 @@ resources.xml: Princed Resources : Resource tree
    <item value="544" path="frame11.bmp"/>
    <item value="545" path="frame12.bmp"/>
   </folder>
-  <folder path="clipping">
+  <folder path="climbing">
    <item value="546" path="frame01.bmp"/>
    <item value="547" path="frame02.bmp"/>
    <item value="548" path="frame03.bmp"/>
@@ -1067,7 +1067,7 @@ resources.xml: Princed Resources : Resource tree
    <item value="610" path="frame03.bmp"/>
    <item value="611" path="frame04.bmp"/>
   </folder>
-  <folder path="dieing">
+  <folder path="dying">
    <item value="612" path="frame01.bmp"/>
    <item value="613" path="frame02.bmp"/>
    <item value="614" path="frame03.bmp"/>
@@ -1134,7 +1134,7 @@ resources.xml: Princed Resources : Resource tree
  <folder index="pop1" name="binary" file="digisnd2.dat" path="digisnd2" type="wave">
   <item value="10044" path="skel alive.wav"/>
   <item value="10045" path="mirror.wav"/>
-  <item value="10046" path="something chopped.wav"/>
+  <item value="10046" path="something chomped.wav"/>
   <item value="10047" path="chomper.wav"/>
   <item value="10048" path="something spiked.wav"/>
   <item value="10049" path="spikes.wav"/>
@@ -1177,7 +1177,7 @@ resources.xml: Princed Resources : Resource tree
  <folder index="pop1" name="binary" file="mt32snd2.dat" path="mt32snd2" type="midi">
   <item value="10044" path="skel alive.mid"/>
   <item value="10045" path="mirror.mid"/>
-  <item value="10046" path="something chopped.mid"/>
+  <item value="10046" path="something chomped.mid"/>
   <item value="10047" path="chomper.mid"/>
   <item value="10048" path="something spiked.mid"/>
   <item value="10049" path="spikes.mid"/>
@@ -1278,7 +1278,7 @@ resources.xml: Princed Resources : Resource tree
   <item value="775" path="res775.bmp"/>
   <item value="776" path="res776.bmp"/>
   <item value="777" path="spiked.bmp"/>
-  <item value="778" path="chopped.bmp"/>
+  <item value="778" path="chomped.bmp"/>
  </folder>
 
  <folder index="pop1" name="binary" file="vizier.dat" path="vizier" palette="750" type="image">
@@ -1310,7 +1310,7 @@ resources.xml: Princed Resources : Resource tree
   <item value="775" path="res775.bmp"/>
   <item value="776" path="res776.bmp"/>
   <item value="777" path="spiked.bmp"/>
-  <item value="778" path="chopped.bmp"/>
+  <item value="778" path="chomped.bmp"/>
   <item value="779" path="res779.bmp"/>
   <item value="780" path="res780.bmp"/>
   <item value="781" path="res781.bmp"/>
@@ -1348,7 +1348,7 @@ resources.xml: Princed Resources : Resource tree
   <item value="775" path="res775.bmp"/>
   <item value="776" path="res776.bmp"/>
   <item value="777" path="spiked.bmp"/>
-  <item value="778" path="chopped.bmp"/>
+  <item value="778" path="chomped.bmp"/>
   <item value="779" path="res779.bmp"/>
   <item value="780" path="res780.bmp"/>
   <item value="781" path="res781.bmp"/>
@@ -1384,7 +1384,7 @@ resources.xml: Princed Resources : Resource tree
   <item value="775" path="res775.bmp"/>
   <item value="776" path="res776.bmp"/>
   <item value="777" path="spiked.bmp"/>
-  <item value="778" path="chopped.bmp"/>
+  <item value="778" path="chomped.bmp"/>
   <item value="779" path="res779.bmp"/>
   <item value="780" path="res780.bmp"/>
   <item value="781" path="res781.bmp"/>
@@ -1420,7 +1420,7 @@ resources.xml: Princed Resources : Resource tree
   <item value="775" path="res775.bmp"/>
   <item value="776" path="res776.bmp"/>
   <item value="777" path="spiked.bmp"/>
-  <item value="778" path="chopped.bmp"/>
+  <item value="778" path="chomped.bmp"/>
   <item value="779" path="res779.bmp"/>
   <item value="780" path="res780.bmp"/>
   <item value="781" path="res781.bmp"/>
