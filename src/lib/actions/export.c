@@ -186,8 +186,8 @@ int extract(const char* vFiledat,const char* vDirExt, tResourceList* r, int opti
 */						fprintf(outputStream,"Error in file %s (code %d)\n"/*PR_TEXT_EXPORT_ERROR*/,getFileNameFromPath(file),ok);/*
 					}
 				} TODO: add warning counter */
+				if (ok==PR_RESULT_SUCCESS) count++;
 				ok=1; /* efit the for and add !fatal(ok)*/
-				if (ok) count++;
 			} else {
 				/* If the DAT file is unknown, add it in the XML */
 				getFileName(file,vDirExt,&res,vFiledat,vDatFileName,optionflag,backupExtension,format);
@@ -210,6 +210,7 @@ int extract(const char* vFiledat,const char* vDirExt, tResourceList* r, int opti
 	list_drop(&paletteBuffer);
 
 	/* Close unknownXML */
+	ok=(count>0);
 	return ok?count:PR_RESULT_ERR_EXTRACTION;
 }
 
