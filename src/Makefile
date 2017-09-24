@@ -66,7 +66,7 @@ EXEOBJ   = $(MAIN) $(XML) $(COMPRESS) $(ACTIONS) $(LAYERS) $(OBJECT) $(FORMAT) $
 LIBOBJ   = $(MAIN) $(XML) $(COMPRESS) $(ACTIONS) $(LAYERS) $(OBJECT) $(FORMAT) $(PORTS)
 
 EXEFILE  = bin/pr
-XMLFILE  = bin/resources.xml
+XMLFILE  = bin/resources.xml bin/pop2.xml
 
 ADDONS   = .python.o
 
@@ -111,10 +111,10 @@ libs: $(LIBOBJ)
 
 #files
 
-$(XMLFILE): xml/resources.xml
+$(XMLFILE): xml/resources.xml xml/pop2.xml
 	$(INFO) Copying resources...
 	$(MAKEDIR) bin
-	$(COPY) xml/resources.xml $(XMLFILE)
+	$(COPY) xml/resources.xml xml/pop2.xml bin/
 
 .import.o: lib/actions/import.c include/autodetect.h include/bmp.h include/common.h include/dat.h include/disk.h include/idlist.h include/import.h include/memory.h include/mid.h include/pal.h include/plv.h include/unknown.h include/wav.h
 	$(INFO) Compiling import module...
