@@ -16,10 +16,21 @@ x See todo.txt for future plans.
 -------------------------------------------------
 
 -------------------------------------------------
+PR v1.3.1 (released 2018-05-12)
+-------------------------------------------------
++ Fixed PoP2 palettes and added "paletteoffset" attribute.
+- Fixed XML parsing error on tags without attributes.
+- Added some better error messages.
+- Added level numbers to PoP2 levels in resources.xml.
+- Fixed some mistakes in file names in resources.xml.
+- Don't crash on empty images.
+- Report only the number of successfully exported resources.
+
+-------------------------------------------------
 PR v1.3.1 pre-release 2 (released 2014-12-07)
 -------------------------------------------------
 - PR now won't round up palette colors from 254 and 255 to 256.
-- Added support for PoP2 waves.
++ Added support for PoP2 waves.
 - In a partial import, no conversion was done.
 - In a partial import, no checksum bytes were written.
 - PR now won't crash if I give a directory name without a trailing backslash.
