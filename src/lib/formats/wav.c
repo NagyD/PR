@@ -72,7 +72,7 @@ int writeWav(const char* file, tWave* snd, int optionflag, const char* backupExt
 
 	ok=ok&&fwrite(wav,sizeof(wav),1,target);
 	ok=ok&&fwrite(snd->samples.data,snd->samples.size,1,target);
-	ok=ok&&fwrite("",sndsize_pad-sndsize,1,target);
+	if (sndsize_pad>sndsize) ok=ok&&fwrite("",sndsize_pad-sndsize,1,target);
 	ok=ok&&(!writeCloseOk(target,optionflag,backupExtension));
 
 	return ok?PR_RESULT_SUCCESS:PR_RESULT_ERR_FILE_NOT_WRITE_ACCESS;
@@ -83,14 +83,15 @@ int readWav(const char* file, tBinary* snd, int *pchannels, long *psamplerate, l
 	int ok;
 	char magic[4];
 	long int ChunkSize=0; /* longs must be initialized to avoid trash in 64 bits architectures */
-	long int SubChunk1Size=0;
+	long int SubChunkFmtSize=0;
 	short int AudioFormat;
 	short int NumChannels;
 	long int SampleRate=0;
 	long int ByteRate=0;
 	short int BlockAlign;
 	short int BitsPerSample;
-	long int SubChunk2Size=0;
+	long int SubChunkDataSize=0;
+	long int SubChunkDataOffset = 0;
 	
 	fd=fopen(file,"rb");
 	if (!fd) return PR_RESULT_ERR_FILE_NOT_READ_ACCESS;
@@ -98,35 +99,110 @@ int readWav(const char* file, tBinary* snd, int *pchannels, long *psamplerate, l
 	/* Read headers */
 	ok=fread(magic,4,1,fd);
 	ok=ok&&!strncmp(magic,"RIFF",4);
+	if (!ok) {
+		printf("File doesn't start with RIFF header!\n");
+		goto end;
+	}
 	ok=ok&&freadlong(&ChunkSize,fd);
+	if (ChunkSize < 0) {
+		printf("Negative RIFF chunk size!\n");
+		goto end;
+	}
 	ok=ok&&fread(magic,4,1,fd);
 	ok=ok&&!strncmp(magic,"WAVE",4);
-	ok=ok&&fread(magic,4,1,fd);
-	ok=ok&&!strncmp(magic,"fmt ",4);
-	ok=ok&&freadlong(&SubChunk1Size,fd);
-	ok=ok&&freadshort(&AudioFormat,fd);
-	ok=ok&&freadshort(&NumChannels,fd);
-	ok=ok&&freadlong(&SampleRate,fd);
-	ok=ok&&freadlong(&ByteRate,fd);
-	ok=ok&&freadshort(&BlockAlign,fd);
-	ok=ok&&freadshort(&BitsPerSample,fd);
-	ok=ok&&fread(magic,4,1,fd);
-	ok=ok&&!strncmp(magic,"data",4);
-	ok=ok&&freadlong(&SubChunk2Size,fd);
+	if (!ok) {
+		printf("RIFF type is not WAVE!\n");
+		goto end;
+	}
+
+	while (ok && SubChunkDataOffset == 0 && ftell(fd) < ChunkSize + 8) {
+		long SubChunkSize = 0;
+		ok=ok&&fread(magic,4,1,fd);
+		ok=ok&&freadlong(&SubChunkSize,fd);
+		if (!ok) {
+			printf("Can't read subchunk header! (File is truncated?)\n");
+			goto end;
+		}
+		if (SubChunkSize < 0) {
+			printf("Negative subchunk size!\n");
+			goto end;
+		}
+		long chunk_start_offset = ftell(fd);
+		long chunk_end_offset = chunk_start_offset + ROUND_UP_TO_EVEN(SubChunkSize);
+		if (!strncmp(magic,"fmt ",4)) {
+			SubChunkFmtSize = SubChunkSize;
+			if (SubChunkFmtSize >= 16) {
+				ok=ok&&freadshort(&AudioFormat,fd);
+				ok=ok&&freadshort(&NumChannels,fd);
+				ok=ok&&freadlong(&SampleRate,fd);
+				ok=ok&&freadlong(&ByteRate,fd);
+				ok=ok&&freadshort(&BlockAlign,fd);
+				ok=ok&&freadshort(&BitsPerSample,fd);
+				if (!ok) {
+					printf("Error reading fmt chunk! (File is truncated?)\n");
+					goto end;
+				}
+			} else {
+				ok = 0;
+				printf("fmt chunk is too short!\n");
+				goto end;
+			}
+		} else if (!strncmp(magic,"data",4)) {
+			SubChunkDataSize = SubChunkSize;
+			SubChunkDataOffset = chunk_start_offset;
+			break;
+		}
+		ok=ok&&0==fseek(fd, chunk_end_offset, SEEK_SET);
+		if (!ok) {
+			printf("Can't seek to end of chunk!\n");
+			goto end;
+		}
+	}
+
+	if (!ok) {
+		printf("Unknown error!\n");
+		goto end;
+	}
+
+	if (SubChunkFmtSize == 0) {
+		ok = 0;
+		printf("File has no fmt chunk!\n");
+		goto end;
+	}
+
+	if (SubChunkDataOffset == 0) {
+		ok = 0;
+		printf("File has no data chunk!\n");
+		goto end;
+	}
+
+	fseek(fd, SubChunkDataOffset, SEEK_SET);
 	
 	/* Validate input vars */	
-  ok=ok&& (AudioFormat   == 1 ); /* PCM */
-  ok=ok&& (BlockAlign    == NumChannels * BitsPerSample/8 );
+	ok=ok&& (AudioFormat   == 1 ); /* PCM */
+	if (!ok) {
+		printf("Wave is not PCM!\n");
+		goto end;
+	}
+	ok=ok&& (BlockAlign    == NumChannels * BitsPerSample/8 );
+	if (!ok) {
+		printf("BlockAlign is incorrect!\n");
+		goto end;
+	}
 /*	ok=ok&& ((int)ByteRate      == (int)(SampleRate * NumChannels * BitsPerSample/8) ); * why int? because I can't compare it with long, never tried in 32 bits */
-	ok=ok&& ((int)ChunkSize     == (int)(4 + (8 + SubChunk1Size) + (8 + ROUND_UP_TO_EVEN(SubChunk2Size)) ));
-  ok=ok&& ((int)SubChunk1Size == (int)16 ); /* PCM chunk */
-/*	ok=ok&& (SubChunk2Size == NumSamples * NumChannels * BitsPerSample/8 );*/
+	//ok=ok&& ((int)ChunkSize     == (int)(4 + (8 + SubChunkFmtSize) + (8 + ROUND_UP_TO_EVEN(SubChunkDataSize)) )); // This is false if there is a LIST chunk for example.
+	//ok=ok&& ((int)SubChunkFmtSize == (int)16 ); /* PCM chunk */
+/*	ok=ok&& (SubChunkDataSize == NumSamples * NumChannels * BitsPerSample/8 );*/
 	
+	end:
 	/* Read data*/
 	if (ok) {
-		snd->size=SubChunk2Size;
-		snd->data=malloc(SubChunk2Size);
-		ok=fread(snd->data,SubChunk2Size,1,fd);
+		snd->size=SubChunkDataSize;
+		snd->data=malloc(SubChunkDataSize);
+		ok=fread(snd->data,SubChunkDataSize,1,fd);
+		if (!ok) {
+			printf("Could not read the whole wave data! (File is truncated?)\n");
+		}
 		fclose(fd);
 	} else {
 		fclose(fd);

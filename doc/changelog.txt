@@ -16,6 +16,11 @@ x See todo.txt for future plans.
 -------------------------------------------------
 
 -------------------------------------------------
+(upcoming version, no release date yet)
+-------------------------------------------------
+- WAV importing now can handle files with extra chunks (like LIST). Also added some better error messages.
+
+-------------------------------------------------
 PR v1.3.1 (released 2018-05-12)
 -------------------------------------------------
 + Fixed PoP2 palettes and added "paletteoffset" attribute.

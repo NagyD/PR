@@ -118,6 +118,7 @@ void* objWaveCreate(tBinary cont, int *error) { /* use get like main.c */
 	} else {
 		/* TODO: find a better error code */
 		*error = PR_RESULT_ERR_EXTRACTION;
+		printf("Can't determine wave version!\n");
 		return NULL;
 	}
 
