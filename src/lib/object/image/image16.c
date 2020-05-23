@@ -100,7 +100,7 @@ int pop2decompress(const unsigned char* input, int inputSize, int verify, unsign
 |                   Compression Level Manager                   |
 \***************************************************************/
 
-int compressionLevel=3;
+int compressionLevel=7;
 int compressionHigher;
 
 void setCompressionLevel(int cl) {
