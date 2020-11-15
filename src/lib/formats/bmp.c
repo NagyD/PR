@@ -150,7 +150,8 @@ int readBmp(const char* file, unsigned char** data, int *ph, int *pw,  int *pbit
 		/* info header */
 	ok=ok&&freadlong(&aux      ,bitmap);
 /* http://en.wikipedia.org/wiki/BMP_file_format#DIB_header_.28bitmap_information_header.29 */
-/* GIMP saves 108 byte headers by default */
+/* GIMP saves 108-byte headers by default (if color space info is enabled) */
+/* 124-byte headers since GIMP 2.10.22 */
 	ok=ok&&(aux>=40);
         headersize=aux;
 	ok=ok&&freadlong(&width    ,bitmap);
@@ -159,7 +160,12 @@ int readBmp(const char* file, unsigned char** data, int *ph, int *pw,  int *pbit
 	ok=ok&&(aux==1);
 	ok=ok&&freadshort(&bits    ,bitmap);
 	ok=ok&&freadlong(&aux      ,bitmap);    /* Compression type (0=none)   */
-	if (ok&&aux!=0) { fclose(bitmap); return -1; /* PR_NO_COMPRESS_SUPPORT */ }
+	/* 0 means no compression, 3 is used in files saved by GIMP 2.10.22 with color space info. */
+	if (ok&&aux!=0 && aux!=3) {
+		printf("Error: BMP uses an unknown compression method: %lu\n", aux);
+		fclose(bitmap);
+		return -1; /* PR_NO_COMPRESS_SUPPORT */
+	}
 	ok=ok&&freadlong(&aux      ,bitmap);    /* Image size in bytes (junk)  */
 	ok=ok&&freadlong(&aux      ,bitmap);    /* Pixels per meter x (junk)   */
 	ok=ok&&freadlong(&aux      ,bitmap);    /* Pixels per meter y (junk)   */

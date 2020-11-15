@@ -16,6 +16,12 @@ x See todo.txt for future plans.
 -------------------------------------------------
 
 -------------------------------------------------
+upcoming version (no release date yet)
+-------------------------------------------------
+- Made the highest compression level the default.
+- Added support for BMP images saved by GIMP 2.10.22 with color space info. (compression method = 3)
+
+-------------------------------------------------
 PR v1.3.1 (released 2018-05-12)
 -------------------------------------------------
 + Fixed PoP2 palettes and added "paletteoffset" attribute.
