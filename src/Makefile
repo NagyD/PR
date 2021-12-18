@@ -82,7 +82,7 @@ $(EXEFILE): $(EXEOBJ) $(XMLFILE)
 	$(CC) $(OPTIONS) -o $(EXEFILE) $(EXEOBJ)
 	$(INFO) Program successfully compiled
 	$(INFO)
-	$(INFO) Please read readme.txt for syntax information
+	$(INFO) Please read the project README.md for usage information
 	$(INFO)
 
 #command options
