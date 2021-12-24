@@ -61,7 +61,7 @@ $(EXEFILE): $(EXEOBJ)
 	$(CC) $(EXEOBJ) -o $(EXEFILE) $(LINKEROPTIONS)
 	$(INFO) Program successfully compiled
 	$(INFO):
-	$(INFO) Please read readme.txt for syntax information
+	$(INFO) Please read the project README.md for usage information
 	$(INFO):
 
 #command options
