@@ -48,7 +48,7 @@ main.c: PR console program parsing and IDE
 #include "compress.h" /* setCompressionLevel */
 #include "parse.h" /* free parsed cache */
 
-FILE* outputStream;
+extern FILE* outputStream;
 
 void main_syntax() {
 	fprintf(outputStream,PARSING_HELP_BEGIN);
